@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="main.css" media="all">
+  <title>main</title>
+  <script type="text/javascript" src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+  <script type="text/javascript" src='nav.js'></script>
+  <script type="text/javascript" src='nav2.js?ver=1.0'></script>
+  <script type="text/javascript" src='slider.js?ver=1.0'></script>
+  <script type="text/javascript" src='spoiler.js?ver=1.0'></script>
+  <script type="text/javascript" src='start.js?ver=1.0'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<style>
+body
+{
+	font-size: 18px;
+}
+
+.slider {
+width:200px;
+height:11px;
+top:-30px;
+background:#eee;
+position:relative;
+margin:0 130px;
+padding:0 10px;
+}
+.slider1 {
+width:200px;
+height:11px;
+top:-30px;
+background:#eee;
+position:relative;
+margin:0 130px;
+padding:0 10px;
+}
+
+.ui-slider-handle {
+width:24px;
+height:24px;
+position:absolute;
+top:-7px;
+margin-left:-12px;
+z-index:200;
+background:#fc0;
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+}
+
+.ui-widget-header {
+background:#f00;
+height:8px;
+left:1px;
+top:1px;
+position:absolute;
+}
+
+.textt
+{
+	border:3px solid red;
+	border-radius: 7px; 
+   -webkit-border-radius: 7px; 
+   -moz-border-radius: 7px;
+   font-size: 18px; 
+}
+
+.zag
+{
+	text-align: left;
+	padding-bottom: 0;
+	padding-left: 5%;
+  margin-top:0;
+}
+
+.zag1
+{
+	text-align: left;
+	padding-bottom: 3%;
+	padding-left: 5%;
+}
+
+.zag2
+{
+	text-align: left;
+	padding-bottom: 0;
+  margin-top:0;
+}
+#znch
+{
+  position: relative;
+  left:5%;
+  width: 50px;
+  height: 25px;
+  top:-10px;
+  text-align: center;
+}
+#znch1
+{
+  position: relative;
+  left:5%;
+  width: 50px;
+  height: 25px;
+  top:-10px;
+  text-align: center;
+}
+.znch2
+{
+  position: relative;
+  left:5%;
+  width: 57px;
+  height: 34px;
+  top:-25px;
+  text-align: center;
+}
+
+.calk_sw
+{
+  max-width: 1200px;
+  background-color: yellow;
+  margin: auto;
+  padding-top: 10%;
+}
+.caleft
+{
+  width: 70%;
+  margin: auto;
+  height: 1000px;
+  background-color: green;
+  border: 3px solid black;
+}
+.block
+{
+  width: 100%;
+	padding-top: 3%;
+	 float: left;
+}
+.block1
+{
+  width: 100%;
+   float: left;
+}
+
+.block2
+{
+  width: 100%;
+  float: left;
+ 
+  height: 100px;
+}
+
+.block3
+{
+  width: 42%;
+  float: left;
+  padding-top: 3%; 
+  padding-left: 5%;
+}
+
+.block4
+{
+  width: 42%;
+  padding-top: 3%; 
+  float: right;
+    padding-left: 5%;
+  
+}
+
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+$( ".slider" ).slider({
+          animate: true,
+                range: "min",
+                value: 2,
+                min: 2,
+                max: 3.5,
+        		step: 0.5,
+
+                slide: function( event, ui ) {
+                    $('#znch').attr('value', ui.value);
+                },
+        });
+$( ".slider1" ).slider({
+          animate: true,
+                range: "min",
+                value: 3,
+                min: 3,
+                max: 4.5,
+        		step: 0.5,
+
+                slide: function( event, ui ) {
+                    
+                    $('#znch1').attr('value', ui.value);
+                },
+        });
+      });
+</script>
+</head>
+
+<body>
+<div class="calk_sw">
+<div class="caleft">
+
+  <div class="block">
+  	<p class="zag">Длина (в метрах)</p>
+  	<input id="znch" class="textt" name="znch" type="text" value="2" />
+  	<div class="slider"><a class="ui-slider-handle" href="#"></a></div>
+  </div>
+
+  <div class="block1">
+  	<p class="zag">Толщина стенок (в мм)</p>
+  	<input id="znch1" class="textt" name="znch1" type="text" value="3" />
+  	<div class="slider1"><a class="ui-slider-handle" href="#"></a></div>
+  </div>
+
+
+  <div class="block2">
+  	<p class="zag1">Диаметр (в мм)</p>
+    <p><select class="textt znch2" name="select2">
+    <option selected value="76">76</option>
+    <option value="89">89</option>
+    <option value="108">108</option>
+    <option value="139">139</option>
+   </select>
+ </p></div>
+    
+  <div class="block3">
+      <p class="zag2">Количество лопостей</p>
+      <input type="radio" name="q2" checked value="1">1
+      <input type="radio" name="q2" value="2">2
+    </div>
+    <div class="block4">
+      <p class="zag2">Наличие оголовка</p>
+      <input type="radio" name="q3" checked value="1">Да
+      <input type="radio" name="q3" value="2">Нет
+    </div>
+    <div class="block3">
+    	<p class="zag2">Количество свай</p>
+    	<input required id="kol" class="textt" name="kol"  type="number" min="1" placeholder="Введите количество" />
+    </div>
+    <div class="block4">
+    <p class="zag2">Регион доставки</p>
+    <p><select class="textt" name="select">
+    <option selected value="1">Новосибирск</option>
+    <option value="2">Новосибирская обл.</option>
+    <option value="3">Другой город</option>
+   </select>
+ </p></div>
+  </div>
+</div>
+</body>
+</html>

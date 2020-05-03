@@ -1,0 +1,822 @@
+  /*spoiler start*/
+.spoiler_body 
+{    
+    font-weight: normal; 
+    display: none;
+    padding-top: 10px;
+    margin-right: 5%;
+    width: 95%;
+    color: black;
+    font-size: 18px;
+}
+.spoiler1,.spoiler2,.spoiler3,.spoiler4,.spoiler5,.spoiler6,.spoiler7,.spoiler8,.spoiler9
+{ 
+    color:black;
+    font-size: 22px;
+    cursor: pointer; 
+    text-decoration: none; 
+    
+}
+
+
+.quests
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    text-align: left;
+    background-color: #fac2b1;
+}
+.icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9
+{
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    float:right;
+    margin-right: 20px;
+    transition: 0.4s;
+    
+}
+.icon1.fix11,.icon2.fix21,.icon3.fix31,.icon4.fix41,.icon5.fix51,.icon6.fix61,.icon7.fix71,.icon8.fix81,.icon9.fix91
+{
+    background-color: #e6e6fa;
+}
+.icon1.fix12,.icon2.fix22,.icon3.fix32,.icon4.fix42,.icon5.fix52,.icon6.fix62,.icon7.fix72,.icon8.fix82,.icon9.fix92
+{
+    
+    transform: rotate(45deg);
+    transition: 0.4s;
+
+}
+.quest1,.quest2,.quest3,.quest4,.quest5,.quest6,.quest7,.quest8,.quest9
+{
+    padding-top: 30px;
+    padding-left: 50px;
+    margin-left: 22%;
+    font-weight: bold;
+    background-color: white;
+    width: 56%;
+    padding-bottom: 25px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+
+/*spoiler end*/
+
+
+
+/*КАЛЬКУЛЯТОР начало*/
+.slider {
+width:200px;
+height:11px;
+top:-30px;
+background:#eee;
+position:relative;
+margin:0 130px;
+padding:0 10px;
+}
+.slider1 {
+width:200px;
+height:11px;
+top:-30px;
+background:#eee;
+position:relative;
+margin:0 130px;
+padding:0 10px;
+}
+
+.ui-slider-handle {
+width:24px;
+height:24px;
+position:absolute;
+top:-7px;
+margin-left:-12px;
+z-index:200;
+background:#fc0;
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+}
+
+.ui-widget-header {
+background:#f00;
+height:8px;
+left:1px;
+top:1px;
+position:absolute;
+}
+
+.textt
+{
+  border:3px solid #ffbc13;
+  border-radius: 7px; 
+   -webkit-border-radius: 7px; 
+   -moz-border-radius: 7px;
+   font-size: 18px; 
+}
+
+
+.kol
+{
+  border:3px solid #ffbc13;
+  border-radius: 7px; 
+   -webkit-border-radius: 7px; 
+   -moz-border-radius: 7px;
+   font-size: 18px; 
+   width: 150px;
+   padding-left: 15px;
+   height: 25px;
+   margin-top: 0;
+   margin-top: 0;
+}
+
+.gorod
+{
+  width: 250px;
+  height: 34px;
+}
+
+.zag
+{
+  text-align: left;
+  padding-bottom: 2%;
+  margin-top:0;
+}
+
+.zag1
+{
+  text-align: left;
+  padding-bottom: 3%;
+
+  margin-top:0;
+}
+
+.zag2
+{
+  text-align: left;
+  padding-bottom: 0;
+
+
+  margin-top:0;
+}
+
+.znch
+{
+  position: relative;
+  border:3px solid #ffbc13;
+  border-radius: 7px; 
+   -webkit-border-radius: 7px; 
+   -moz-border-radius: 7px;
+   font-size: 18px; 
+  width: 50px;
+  height: 25px;
+  top:-10px;
+  text-align: center;
+}
+
+
+.znch2
+{
+  position: relative;
+  width: 57px;
+  height: 34px;
+
+  text-align: center;
+}
+
+
+
+
+.calk_sw
+{
+  max-width: 1200px;
+  background-color: white;
+  margin: auto;
+}
+.caleft
+{
+  width: 80%;
+  margin: auto;
+  height: 1500px;
+  background-color: white;
+  border: 0px solid black;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+.kalkulimg
+{
+  float: right;
+  width: 54%;
+  height: 463.5px;
+  margin-top: 6%;
+  padding-bottom: 12px;
+  border: 0px solid grey;
+}
+
+.block
+{
+  width: 39%;
+  padding-top: 6%;
+   float: left;
+}
+.block1
+{
+  width: 39%;
+  margin-right: 6%;
+  float: left;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid grey; 
+}
+
+.block2
+{
+  width: 45%;
+  float: left;
+  height: 100px;
+}
+
+.block3
+{
+  width: 42%;
+  float: left;
+  padding-bottom: 2%;
+  padding-top: 5%;
+  border-bottom: 1px solid grey;
+  height: 80px;
+}
+
+.block4
+{
+  width: 43%; 
+  float: left;
+  padding-left: 3%;
+  padding-bottom: 2%;
+  padding-top: 5%;
+   margin-right: 12%;
+  border-bottom: 1px solid grey;
+  height: 80px;
+}
+
+.block5
+{
+  width: 100%;
+  float: left;
+  padding-top: 3%;
+}
+
+.rangeslider{
+    width: 100%;
+
+}
+.myslider {
+    -webkit-appearance: none;
+    background: #FCF3CF  ;
+    width: 50%;
+    height: 25px;
+    opacity: 2;
+     border-radius: 150px;
+   }
+  
+.myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: maroon  ;
+    width: 14%;
+    height: 25px;
+    border-radius: 150px;
+  }  
+  .myslider:hover {
+    opacity: 1;
+}
+
+
+
+.price
+{
+  float: right;
+  width: 46%;
+  padding-top: 3%;
+  padding-left: 3%;
+  margin-top: 8%;
+  border: 1px solid grey;
+}
+.price1
+{
+  float: left;
+  width: 46%;
+  padding-top: 3%;
+  padding-left: 3%;
+  margin-top: 8%;
+  border: 1px solid grey;
+}
+.price3
+{
+  float: left;
+  width: 46%;
+  padding-top: 3%;
+  padding-left: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 1px solid grey;
+}
+
+
+#end
+{
+  font-size: 33px;
+  font-weight: bold;
+  margin-top: 1%;
+   margin-bottom: 2%;
+   float: left;
+}
+
+
+.odna
+{
+  float: left;
+  width: 100%;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+.odna1
+{
+  float: left;
+  padding-top: 0;
+  margin-top: 0;
+   margin-top: 1%;
+   padding-left: 20px;
+   font-size: 30px;
+  font-weight: bold;
+}
+
+
+/*КАЛЬКУЛЯТОР конец*/
+
+/*nav*/
+ body
+  {margin:0;}
+ .nurdsami_pgernlab a{
+  text-decoration:none;
+}
+.nurdsami_pgernlab{
+  height:70px;
+  background:#222;
+  position:sticky;
+  width: 100%;
+  top: 0;
+  z-index: 99999;
+}
+.nurdsami_pgernlab>ul{
+  position:relative;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.nurdsami_pgernlab>ul>li>ul{
+  position:absolute;
+  left:0;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+.nurdsami_pgernlab>ul>li:hover>ul li a{
+  opacity:1;
+  height:50px;
+  transition:all .3s linear;
+  -o-transition:all .3s linear;
+  -moz-transition:all .3s linear;
+  -webkit-transition:all .3s linear;
+}
+.nurdsami_pgernlab>ul>li>ul a {
+  display: block;
+  color: #fff;
+  width: 150px;
+  line-height: 50px !important;
+  font: 700 14px 'pt sans',sans-serif;
+  background: #565151;
+  border-bottom: 1px solid #8a8686;
+  text-align: center;
+  padding: 0 5px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .3s linear .2s;
+  -o-transition: all .3s linear .2s;
+  -moz-transition: all .3s linear .2s;
+  -webkit-transition: all .3s linear .2s;
+}
+.nurdsami_pgernlab>ul>li{
+  float:right;
+  position:relative;
+}
+.nurdsami_pgernlab>ul>li>a{
+  padding:0 20px;
+  color:#fff;
+  display:block;
+  line-height:70px !important;
+  font:400 15px 'PT Sans', sans-serif;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.lamp span{
+  display:block;
+  height:4px;
+  background:#ee6666;
+  position: relative;
+}
+.lamp span:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(238, 102, 102, 0);
+  border-bottom-color: #ee6666;
+  border-width: 4px;
+  margin-left: -4px;
+}
+.lamp{
+  position:absolute !important;
+  height:4px;
+  top:66px;
+  background:#333;
+  transition:all .3s linear;
+  -o-transition:all .3s linear;
+  -moz-transition:all .3s linear;
+  -webkit-transition:all .3s linear;
+}
+#ots
+{
+  height: 10px;
+  
+  float:right;
+  width: 10px;
+}
+
+/*nav*/
+
+
+/*галерея*/
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin:auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/*галерея*/
+
+
+
+body {
+  background: url(фон2.jpg);
+    font-size: 18px;
+}
+
+h2
+{
+  text-align: center;
+  padding-top: 15px;
+}  
+
+input:focus { outline: none; }
+ input:active{ outline: none; }
+.main
+{
+  max-width: 1200px;
+    margin: auto;
+    margin-top: 25px;
+    background: white;
+}
+
+
+
+
+.past 
+{
+  height: 1710px;
+  padding-left: 60px;
+   padding-right: 60px;
+  width: 1080px;
+
+}
+
+
+
+.past1
+{
+  width: 100%;
+  height: 460px;
+ 
+  margin: 0;
+  padding: 0;
+}
+
+.svai
+{
+  background-color: #ffbc13;
+  width: 100%;
+  font-weight:bold;
+  padding-top: 30px;
+  height: 70px;
+  font-size: 32px;
+  text-align: center;
+
+}
+
+.headerleft
+{
+   padding-left: 2%;
+   padding-right: 2%;
+   border-bottom: 2px solid maroon; 
+  
+   float: left;
+   font-size: 22px;
+}
+
+.headerleft2
+{
+   width: 100%;
+   float: left;
+   padding-top: 0;
+   margin-top: 0;
+}
+
+.headerleft3
+{
+   padding-left: 2%;
+   padding-right: 2%;
+   border-bottom: 2px solid maroon; 
+   
+   float: left;
+   font-size: 22px;
+}
+.textleft
+{
+  height: 500px;
+  float: left;
+  width: 50%;
+}
+.imageright
+{
+  height: 450px;
+  float: right;
+  width: 50%;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+.past2
+{
+  width: 100%;
+  height: 540px;
+
+}
+
+.headerright2
+{
+   margin-left: 1.5%;
+   margin-top:1.5%; 
+   padding-left: 10px;
+   padding-right: 10px;
+   border-bottom: 2px solid maroon; 
+   width: 31%;
+   float: left;
+   font-size: 20px;
+   font-weight:bold;
+   
+}
+
+.headerright
+{
+   width: 100%;
+   padding-bottom: 0;
+   margin-bottom: 0;
+}
+
+.textright
+{
+  height: 500px;
+  float: left;
+  width: 34%;
+  margin-left: 2%;
+  margin-right: 3%;
+}
+
+.imageleft
+{
+  height: 500px;
+  float: left;
+  width: 59%;
+}
+
+
+
+
+
+
+.past3
+{
+  width: 100%;
+  font-size: 18px;
+  height: 570px;
+
+}
+.headerleft4
+{
+   padding-left: 2%;
+   padding-right: 2%;
+   margin-left: 7%;
+   margin-right:23%; 
+   border-bottom: 2px solid maroon; 
+   width: 62%;
+   float: left;
+   padding-bottom: 0;
+   margin-bottom: 2%; 
+}
+
+.hh3
+{
+  padding-bottom: 0;
+   margin-bottom: 0; 
+}
+
+
+
+
+
+.montag
+{
+  height: 1200px;
+  padding:0 60px;
+  width: 1080px;
+  background: green;
+}
+
+.montagleft
+{
+  width: 50%;
+  height: 300px;
+  float: left;
+}
+
+.montagright
+{
+  width: 50%;
+  height: 300px;
+  float: right;
+}
+
+.imgmontagleft
+{
+  width: 50%;
+  height: 300px;
+  float: left;
+}
+
+.imgmontagright
+{
+  width: 50%;
+  height: 300px;
+  float: right;
+}
+
+.plus
+{
+  list-style-image: url(плюс.png);
+  font-size: 23px;
+}
+
+.minus
+{
+  list-style-image: url(минус.png);
+  font-size: 23px;
+}
+
+
+
+/*смета*/
+table
+{
+  width: 100%;
+    margin: auto;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+ td, th {
+        border: 1px solid #98bf21;
+        padding: 3px 7px 2px 7px;
+      }
+th {
+        text-align: center;
+        padding: 5px;
+        background-color: #A7C942;
+        color: #fff;
+      }
+tr:nth-child(odd) { background-color: #EAF2D3; }
+.summa
+ {
+  text-align: right;
+ }
+
+/*end smeta*/
+
+
+
