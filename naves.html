@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="forma.css">
+        <title>main</title>
+        <script type="text/javascript" src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script type="text/javascript" src='nav.js'></script>
+        <script type="text/javascript" src='nav2.js?ver=1.0'></script>
+        <script type="text/javascript" src='slider.js?ver=1.0'></script>
+        <script type="text/javascript" src='spoiler.js?ver=1.0'></script>
+        <script type="text/javascript" src='start.js?ver=1.0'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <style type="text/css">
+            body {
+            background: url(фон2.jpg);
+            font-size: 18px;
+            margin:0;
+            font-family: georgia;
+            }
+            
+            /*nav*/
+            .nurdsami_pgernlab a{
+            text-decoration:none;
+            }
+            .nurdsami_pgernlab{
+            height:70px;
+            background:#ffbc13;
+            color:black;
+            position:sticky;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            clear: both;
+            }
+            .nurdsami_pgernlab>ul{
+            position:relative;
+            list-style:none;
+            padding:0;
+            margin:0;
+            }
+            .nurdsami_pgernlab>ul>li>ul{
+            position:absolute;
+            left:0;
+            padding:0;
+            margin:0;
+            list-style:none;
+            }
+            .nurdsami_pgernlab>ul>li:hover>ul li a{
+            opacity:1;
+            height:50px;
+            transition:all .3s linear;
+            -o-transition:all .3s linear;
+            -moz-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            }
+            .nurdsami_pgernlab>ul>li>ul a {
+            display: block;
+            color: black;
+            width: 200px;
+            line-height: 50px !important;
+            font: 700 14px;
+            background: #565151;
+            border-bottom: 1px solid #8a8686;
+            text-align: left;
+            padding-left: 10px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .3s linear .2s;
+            -o-transition: all .3s linear .2s;
+            -moz-transition: all .3s linear .2s;
+            -webkit-transition: all .3s linear .2s;
+            }
+            .nurdsami_pgernlab>ul>li{
+            float:right;
+            position:relative;
+            }
+            .nurdsami_pgernlab>ul>li>a{
+            padding:0 20px;
+            color:black;
+            display:block;
+            line-height:70px !important;
+            font:400 15px;
+            text-transform:uppercase;
+            text-decoration:none;
+            }
+            .lamp span{
+            display:block;
+            height:4px;
+            background:black;
+            position: relative;
+            }
+            .lamp span:after {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(238, 102, 102, 0);
+            border-bottom-color: black;
+            border-width: 4px;
+            margin-left: -4px;
+            }
+            .lamp{
+            position:absolute !important;
+            height:4px;
+            top:66px;
+            background:#333;
+            transition:all .3s linear;
+            -o-transition:all .3s linear;
+            -moz-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            }
+            #ots
+            {
+            height: 10px;
+            float:right;
+            width: 10px;
+            }
+            /* Position the image container (needed to position the left and right arrows) */
+            .container {
+            position: relative;
+            max-width: 1200px;
+            margin:auto;
+            }
+            /* Hide the images by default */
+            .mySlides {
+            display: none;
+            }
+            /* Add a pointer when hovering over the thumbnail images */
+            .cursor {
+            cursor: pointer;
+            }
+            /* Next & previous buttons */
+            .prev,
+            .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            }
+            /* Position the "next button" to the right */
+            .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            }
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+            /* Container for image text */
+            .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+            }
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+            /* Six columns side by side */
+            .column {
+            float: left;
+            width: 16.66%;
+            }
+            /* Add a transparency effect for thumnbail images */
+            .demo {
+            opacity: 0.8;
+            }
+            .active,
+            .demo:hover {
+            opacity: 1;
+            }
+            .q{
+            vertical-align: middle;
+            }
+            /*nav end*/
+
+
+            /*main start*/
+            .menu
+            {quotes: 1px;
+                background-color: white;
+                height: 193px;
+                margin:0;
+                padding: 0 ;
+            }
+
+            .headd
+            {
+                max-width: 1200px;
+                margin: auto;
+                height: 170px;
+                padding: 0 ;
+            }
+            #logim
+            {
+                float: left;
+                width: 40%;
+                height: 120px;
+                padding: 0;
+                margin: 0;
+            }
+            #rightup
+            {
+                float: right;
+                width: 45%;
+                height: 120px;
+                padding-left: 5%;
+                text-align: left;
+                font-size: 23px;
+            } 
+            .marker
+            {
+                 list-style-image: url(111.png);
+            }
+            .marker2
+            {
+             }
+            #leftdown
+            {
+                float: left;
+                font-size: 20px;
+                width: 29%;
+                height: 38px;
+                font-size: 23px;
+                text-align: left;
+                margin-top:0;
+                padding-top: 12px; 
+                padding-left: 11%;
+                font-family: arial;
+            }
+            #butt
+            {
+                float: left;
+                width: 20%;
+                height: 40px;
+                background-color: red;
+                border-radius: 40px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                padding: 0;
+                margin-left: 17%;
+                 font-family: arial;
+            }
+            /*main end*/
+
+
+
+            input:focus { outline: none; }
+            input:active{ outline: none; }
+            select:focus { outline: none; }
+            select:active{ outline: none; }
+
+           /*смета*/
+
+            .zagsmeta
+            {
+              font-size: 28px;
+              font-weight: 600;
+              font-family: arial;
+              margin-top: 5%;
+              text-align: left; 
+            }
+            .smeta table
+            {
+              width: 90%;
+              margin-left: 0%; 
+              margin-top: 20px;
+              border-collapse: collapse;
+              text-align: center;
+            }
+            .smeta td, th {
+                    border: 1px solid #d9d9d9;
+                    padding: 3px 7px 2px 7px;
+                    width: 5%;
+                    height: 35px;
+                  }
+            .smeta th {
+                    text-align: center;
+                    padding: 5px;
+                    background-color: #ffbc13;
+                    color: #fff;
+                  }
+            .smeta tr:nth-child(odd) { background-color: #f7eac89f; }
+
+            .summa
+             {
+              text-align: right;
+             }
+
+             .smeta td:first-child 
+             {
+              text-align: left;
+             }
+
+
+
+             #stoim1,#stoim2,#stoim3
+             {
+              text-align: right;
+             }
+
+            /*end smeta*/
+
+
+
+            /*КАЛЬКУЛЯТОР начало*/
+
+
+            .slider {
+            width:200px;
+            height:11px;
+            top:-30px;
+            background:#eee;
+            position:relative;
+            margin:0 130px;
+            padding:0 10px;
+            }
+            .slider1 {
+            width:200px;
+            height:11px;
+            top:-30px;
+            background:#eee;
+            position:relative;
+            margin:0 130px;
+            padding:0 10px;
+            }
+            .ui-slider-handle {
+            width:24px;
+            height:24px;
+            position:absolute;
+            top:-7px;
+            margin-left:-12px;
+            z-index:200;
+            background:#fc0;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            }
+            .ui-widget-header {
+            background:#f00;
+            height:8px;
+            left:1px;
+            top:1px;
+            position:absolute;
+            }
+            .textt
+            {
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            }
+            .kol
+            {
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            width: 150px;
+            padding-left: 15px;
+            height: 25px;
+            margin-top: 0;
+            margin-top: 0;
+            }
+            .gorod
+            {
+            width: 200px;
+            height: 34px;
+            }
+            .poli
+            {
+            width: 270px;
+            height: 34px;
+            }
+
+            .colorr
+            {
+              width: 155px;
+              height: 34px;
+            }
+
+            .kark
+            {
+              width: 100px;
+              height: 34px;
+            }
+
+            .yst
+            {
+              width: 155px;
+              height: 34px;
+            }
+
+            .stol
+            {
+              width: 100px;
+              height: 34px;
+            }
+
+            .zag
+            {
+            text-align: left;
+            padding-bottom: 2%;
+            margin-top:0;
+            }
+            .zag1
+            {
+            text-align: left;
+            padding-bottom: 3%;
+            margin-top:0;
+            }
+            .zag2
+            {
+            text-align: left;
+            padding-bottom: 0;
+            margin-top:0;
+            }
+            .znch
+            {
+            position: relative;
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            width: 50px;
+            height: 25px;
+            top:-10px;
+            text-align: center;
+            }
+            .znch2
+            {
+            position: relative;
+            width: 57px;
+            height: 34px;
+            text-align: center;
+            }
+            .znch3
+            {
+            position: relative;
+            width: 150px;
+            height: 34px;
+            text-align: center;
+            }
+            .calk_sw
+            {
+            max-width: 1200px;
+            background-color: white;
+            margin: auto;
+            }
+            .caleft
+            {
+            width: 80%;
+            margin: auto;
+            height: 1900px;
+            font-family: arial;
+            background-color: white;
+            border: 0px solid black;
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+            .kalkulimg
+            {
+            position: relative;
+            float: right;
+            width: 54%;
+            height: 463.5px;
+            margin-top: 6%;
+            padding-bottom: 0px;
+            border: 0px solid grey;
+            }
+            .block
+            {
+            width: 39%;
+            padding-top: 6%;
+            float: left;
+
+            }
+            .block1
+            {
+            width: 39%;
+            margin-right: 6%;
+            float: left;
+            padding-top: 2%;
+            padding-bottom: 2%;
+             
+            }
+            .block23
+            {
+            width: 39%;
+            margin-right: 6%;
+            float: left;
+            margin-bottom: 0;
+            padding-bottom: 2%;
+            border-bottom: 1px solid grey; 
+            }
+            .block24
+            {
+              height: 280px;
+              width: 40%;
+              padding-top:400px;
+            }
+            .block2
+            {
+            width: 45%;
+            float: left;
+            height: 300px;
+
+            clear: both;
+            }
+            .block3
+            {
+            width: 65%;
+            float: left;
+            padding-bottom: 2%;
+            padding-top: 2%;
+            height: 80px;
+            }
+            .block4
+            {
+            width: 43%; 
+            float: left;
+            padding-bottom: 0%;
+            padding-top: 2%;
+            margin-right: 1%;
+            height: 80px;
+            }
+            .block5
+            {
+            width: 50%;
+            float: left;
+            padding-top: 2%;
+            }
+            .block6
+            {
+            width: 45%;
+            float: left;
+            padding-top: 3%;
+            clear: both;
+            }
+            .block7
+            {
+            width: 55%;
+            float: left;
+            padding-top: 3%;
+            }
+
+            .block8
+            {
+            width: 100%;
+            float: left;
+            padding-top: 3%;
+            }
+            .rangeslider{
+            width: 100%;
+            }
+            .myslider {
+            -webkit-appearance: none;
+            background: #FCF3CF  ;
+            width: 80%;
+            height: 23px;
+            opacity: 2;
+            border-radius: 150px;
+            }
+            .myslider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            cursor: pointer;
+            background: maroon  ;
+            width: 8%;
+            height: 23px;
+            border-radius: 150px;
+            }  
+            .myslider:hover {
+            opacity: 1;
+            }
+            .price
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 15%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price1
+            {
+            float: left;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price2
+            {
+            float: left;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price4
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            #endust, #dostavka, #end, #bezmon, #itogg
+            {
+            font-weight: bold;
+            font-size: 25px;
+            padding-top: 8px; 
+            font-family: arial;
+            }
+            .odna
+            {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 0;
+            }
+            .odna2
+            {
+            float: left;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            }
+
+            .priceit
+            {
+              font-weight: 600;
+              font-size: 33px; 
+            }
+            .butt2
+            {
+            float: left;
+            width: 49%;
+            height: 40px;
+            background-color: #ffbc13;
+            border-radius: 25px;
+            margin-top: 0%;
+            margin-bottom:0; 
+            text-align: center;
+            margin-right: 5%;
+            line-height: 40px;
+            cursor: pointer;
+            }
+
+            .toch
+            {
+                margin-top: 40%;
+                margin-right: 5%; 
+            }
+
+            /*КАЛЬКУЛЯТОР конец*/
+            body {
+            margin:0;
+            background: url(фон2.jpg);
+            font-size: 18px;
+            }
+            .btn {
+            border: none;
+            outline: none;
+            padding: 3px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+            height: 65px;
+            width: 120px;
+            }
+            .active1 {
+            background-color: #ffbc13;
+            color: white;
+            }
+
+
+            a{ text-decoration: none;
+              color: #ffbc13;
+              font-family: arial;}
+
+            /*spoiler start*/
+            .spoiler_body 
+            {    
+            font-weight: normal; 
+            display: none;
+            padding-top: 10px;
+            margin-right: 5%;
+            width: 95%;
+            color: black;
+            font-size: 18px;
+            }
+            .spoiler1,.spoiler2,.spoiler3,.spoiler4,.spoiler5,.spoiler6,.spoiler7,.spoiler8,.spoiler9
+            { 
+            color:black;
+            font-size: 22px;
+            cursor: pointer; 
+            text-decoration: none; 
+            }
+            .quests
+            {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 100%;
+            text-align: left;
+            background-color: #f7eac89f ;
+            }
+            .icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9
+            {
+            width: 28px;
+            height: 28px;
+            border-radius: 14px;
+            float:right;
+            margin-right: 20px;
+            transition: 0.4s;
+            }
+            .icon1.fix11,.icon2.fix21,.icon3.fix31,.icon4.fix41,.icon5.fix51,.icon6.fix61,.icon7.fix71,.icon8.fix81,.icon9.fix91
+            {
+            background-color: #e6e6fa;
+            }
+            .icon1.fix12,.icon2.fix22,.icon3.fix32,.icon4.fix42,.icon5.fix52,.icon6.fix62,.icon7.fix72,.icon8.fix82,.icon9.fix92
+            {
+            transform: rotate(45deg);
+            transition: 0.4s;
+            }
+            .quest1,.quest2,.quest3,.quest4,.quest5,.quest6,.quest7,.quest8,.quest9
+            {
+            padding-top: 30px;
+            padding-left: 50px;
+            margin-left: 22%;
+            font-weight: bold;
+            background-color: white;
+            width: 56%;
+            padding-bottom: 25px;
+            margin-bottom: 1px;
+            cursor: pointer;
+            }
+            /*spoiler end*/
+            
+
+            /*telo*/
+            .main
+            {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            clear: both;
+            }
+            .past 
+            {
+            z-index: 888;
+            height: 1640px;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-bottom: 5%; 
+            width: 1080px;
+            border: 0px solid red;
+            }
+            .past1
+            {
+            width: 100%;
+            height: 460px;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid grey;
+            }
+            .svai
+            {
+            background-color: #ffbc13;
+            width: 100%;
+            font-weight:bold;
+            padding-top: 30px;
+            height: 70px;
+            font-size: 32px;
+            text-align: center;
+            font-family: arial;
+            }
+            .headerleft
+            {
+            padding-left: 2%;
+            padding-right: 2%;
+            border-bottom: 2px solid maroon; 
+            float: left;
+            font-size: 21px;
+            font-weight: bold;
+            font-family: arial;
+            }
+            .headerleft2
+            {
+            width: 97%;
+            float: left;
+            padding-top: 0;
+            margin-top: 0;
+            font-family: arial;
+            }
+            .headerleft3
+            {
+            padding-left: 2%;
+            padding-right: 2%;
+            border-bottom: 2px solid maroon; 
+            float: left;
+            font-size: 21px;
+            font-weight: bold;
+            font-family: arial;
+            }
+            .textleft
+            {
+            height: 500px;
+            float: left;
+            width: 49%;
+            }
+            .imageright1
+            {
+                height: 450px;
+                float: right;
+                width: 50%;
+                margin-top: 50px;
+            }
+            .imageright
+            {
+            height: 450px;
+            float: right;
+            width: 50%;
+            margin-top: 10px;
+            }
+            .past2
+            {
+            width: 100%;
+            height: 540px;
+            border-bottom: 1px solid grey;
+            padding-bottom: 2%;
+            }
+            .headerright2
+            {
+            margin-left: 1.5%;
+            margin-top:1.9%; 
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: 2px solid maroon; 
+            width: 33%;
+            float: left;
+            font-family: arial;
+            }
+            .headerright
+            {
+            width: 100%;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font-weight:bold;
+            font-size: 23px;
+            font-family: arial;
+            }
+            .textright
+            {
+            height: 500px;
+            float: left;
+            width: 43%;
+            margin-left: 2%;
+            margin-right: 3%;
+            }
+
+            #den
+            {
+                margin-top: 15px; 
+            }
+
+            .textright p
+            {
+                margin-bottom: 13px;
+                margin-top:0; 
+                padding: 0;
+            }
+
+
+            .textright ul li, .textleft ul li
+            {
+            margin-bottom: 13px;
+            }
+
+            .imageleft
+            {
+            height: 430px;
+            float: left;
+            width: 50%;
+            margin-top: 1%;
+            }
+            .past3
+            {
+            width: 100%;
+            font-size: 18px;
+            height: 570px;
+            padding-bottom: 3%;
+            }
+            .headerleft4
+            {
+            padding-left: 2%;
+            padding-right: 2%;
+            margin-left: 7%;
+            margin-right:17%; 
+            border-bottom: 2px solid maroon; 
+            width: 68%;
+            float: left;
+            padding-bottom: 0;
+            margin-bottom: 2%; 
+            font-size: 23px;
+            font-weight: bold;
+            }
+            .hh3
+            {
+            padding-bottom: 0;
+            margin-bottom: 0; 
+            }
+            .montag
+            {
+            height: 1600px;
+            width: 780px; 
+            margin: auto;
+            }
+            .montag table
+            {
+            width: 100%;
+            margin: auto;
+            margin-top: 25px;
+            border-collapse: collapse;
+            text-align: left;
+            }
+            .montag td, th {
+            border: 1px solid maroon;
+            padding: 3px 7px 2px 7px;
+            width: 50%;
+            }
+            .montag th {
+            text-align: center;
+            padding: 5px;
+            background-color: #ffbc13;
+            color: #fff;
+            }
+            .montag tr:nth-child(odd) { background-color: #f7eac89f; }
+            .montag2
+            {
+            width: 30%;
+            float: left;
+            padding-top: 22px;
+            font-size: 20px;
+            }
+            .montag3
+            {
+            width: 45%;
+            float: left;
+            padding-top: 22px;
+            font-size: 20px;
+            }
+            .ryka
+            {
+            border: 1px solid maroon;
+            color: black;
+            }
+            .plus
+            {
+            list-style-image: url(плюс.png);
+            width: 90%;
+            }
+            .minus
+            {
+            list-style-image: url(минус.png);
+            width: 90%;
+            }
+            .maroon
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-size: 23px;
+            padding-left: 2%;
+            margin-left: 1%;
+            width: 44%;
+            }
+            .maroon2
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            padding-left: 2%;
+            width: 98%;
+            }
+            .maroon3
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-size: 23px;
+            padding-left: 2%;
+            width: 90%;
+            }
+            .maroon4
+            {
+            border-bottom: 3px solid maroon;
+            font-weight:bold;
+            width: 50%;
+            margin:auto;
+            padding-top: 30px;
+            padding-bottom:  2%;
+            margin-bottom: 3%;
+            font-size: 23px;
+            text-align: center;
+            }
+            .headermontagleft
+            {
+            background-color: #ffbc13;
+            width: 100%;
+            font-weight:bold;
+            padding-top: 10px;
+            height: 90px;
+            font-size: 32px;
+            text-align: center;
+            }
+            .imgmontagright
+            {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 60%;
+            height: 370px;
+            float: right;
+            }
+            .imgmontagleft2
+            {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            width: 50%;
+            height: 350px;
+            float: left;
+            }
+            .imgmontagright2
+            {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            margin-left: 3%;
+            width: 50%;
+            height: 330px;
+            float: right;
+            }
+            /*telo end*/
+            /*kntakt*/
+            .kontakt
+            {clear: both;
+            width: 100%;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            }
+            .kont1, .kont2,.kont3,.kont4
+            {
+            float: left;
+            width: 21.5%;
+            border: 1px solid grey;
+            height: 100px;
+            margin-left: 1%;
+            text-align: right;
+            padding-right: 2%
+            }
+
+            .kont2
+            {
+              padding-top: 20px;
+              height: 80px;
+            }
+            /*kontakt end*/
+            </style>
+    </head>
+<body>
+        <div class="menu">
+            <div class="headd">
+                <div id="logim"><img src="123.png" width="100%" height="100%"></div>
+                <div id="rightup">
+                    <ul class="marker">
+                        <li class="marker2">Собственное производство!</li>
+                        <li class="marker2">Быстрая и бесплатная доставка!</li>
+                        <li class="marker2">Гарантия 12 месяцев!</li>
+                    </ul>
+                </div>
+                <p id="leftdown">+7 383 328-15-91</p>
+                <div id="butt">Заказать звонок</div>
+            </div>
+        </div>
+        <div class='nurdsami_pgernlab'>
+            <div id="ots"></div>
+            <ul>
+                <li><a href='#test'>Главная</a></li>
+                <li>
+                    <a href='#'>Винтовые сваи</a>
+                    <ul>
+                        <li><a href='svai.html#o_svai'>О сваях</a></li>
+                        <li><a href='svai.html#o_montag'>Монтаж</a></li>
+                        <li><a href='svai.html#o_price'>Расчёт стоимости</a></li>
+                        <li><a href='svai.html#o_otvetah'>Ответы на вопросы</a></li>
+                        <li><a href='svai.html#o_zakaz'>Заказать сваи</a></li>
+                        <li><a href='svai.html#o_kont'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#'>Навесы</a>
+                    <ul>
+                        <li><a href='#naves'>О навесах</a></li>
+                        <!--<li><a href='#yst_nav'>Установка навесов</a></li>-->
+                        <li><a href='#calc'>Расчёт стоимости</a></li>
+                        <li><a href='#otvet'>Ответы на вопросы</a></li>
+                        <li><a href='#zakaz'>Заказать навес</a></li>
+                        <li><a href='#o_kont'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#'>Беседки</a>
+                    <ul>
+                        <li><a href='#'>О беседках</a></li>
+                        <li><a href='#'>Монтаж</a></li>
+                        <li><a href='#'>Расчёт стоимости</a></li>
+                        <li><a href='#'>Заказать беседку</a></li>
+                        <li><a href='#'>Ответы на вопросы</a></li>
+                        <li><a href='#'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#'>Комплексы</a>
+                    <ul>
+                        <li><a href='#'>О детских комплексах</a></li>
+                        <li><a href='#'>Монтаж</a></li>
+                        <li><a href='#'>Расчёт стоимости</a></li>
+                        <li><a href='#'>Заказать комплексы</a></li>
+                        <li><a href='#'>Ответы на вопросы</a></li>
+                        <li><a href='#'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li class='lamp'><span></span></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img class="q" src="навесы/прим2.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img class="q" src="навесы/прим1.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img class="q" src="навесы/прим3.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img class="q" src="навесы/прим4.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img class="q" src="навесы/прим5.jpeg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img class="q" src="навесы/прим6.jpg" style="width:100%;height: 700px;">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img class="q demo cursor" src="навесы/прим2.jpg" style="width:100%; height: 150px" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="навесы/прим1.jpg" style="width:100%; height: 150px" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="навесы/прим3.jpg" style="width:100%; height: 150px" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="навесы/прим4.jpg" style="width:100%; height: 150px" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="навесы/прим5.jpeg" style="width:100%; height: 150px" onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div  id="o_svai" class="column">
+                    <img  id="naves" class="q demo cursor" src="навесы/прим6.jpg" style="width:100%; height: 150px" onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+
+
+            <div class="past">
+                <div class="maroon4">НАВЕСЫ ИЗ ПОЛИКАРБОНАТА  </div>
+                <div class="past1">
+                    <div class="textleft">
+                        <div class="headerleft2">
+                            <p class="headerleft">Поликарбонат </p>
+                        </div>
+                        <p class="headerleft2"> Это особый материал строительного назначения, внешний вид которого создает иллюзию хрупкости и невесомости. Один пласт поликарбоната более чем в 7 раз крепче, чем пластик или ПВХ и прочнее стекла в 200 раз! </p>
+                        <div class="headerleft2">
+                            <p class="headerleft3">Вам нужен навес для машины, на даче или над крыльцом из поликарбоната?</p>
+                        </div>
+                            <p>Мы предлагаем вам изготовление и установку различных типов навесов из поликарбоната в Новосибирске по выгодным ценам. </p>
+                            <p>Навесы из поликарбоната очень универсальны в своем использовании. Они применяются для защиты авто от дождя и уф-излучений, негативно влияющих на лакокрасочную поверхность. </p>
+                    </div>
+                    <div class="imageright1"><img src="навесы/122.jpg" width="100%" height="80%"></div>
+                </div>
+
+                <div class="past2">
+                    <div class="imageleft"><img src="навесы/вид4.jpg" width="100%" height="100%"></div>
+                    <div class="headerright">
+                        <p class="headerright2">Разновидности поликарбонатовых навесов</p>
+                    </div>
+                    <div class="textright">
+                        <p id="den">Навесы из поликарбоната, создают комфортную зону отдыха с тенью в жаркий летний день.</p>
+                        <p> По особенностям конструкции существуют: </p>
+                        <p>1) Встроенные, их планируют ещё на этапе проектирования строительства. </p>
+                        <p>2) Пристроенные навесы, можно пристроить к любой хозяйственной постройке.</p>
+                        <p>3) Отдельные, устанавливаются на участвке как отдельное, целевое сооружение.</p>
+                        <h3> Все необходимые расчеты может сделать наш специалист!</h3>
+                    </div>
+                </div>
+                <div class="past3">
+                    <div class="textleft">
+                        <div class="headerleft4">
+                            <p class="hh3">Преимущества наших навесов из металла и поликарбоната:</p>
+                        </div>
+                        
+                        <ul>
+                           <li> Прочность - поликарбонат устойчив к низким и высоким температурам, а также выдерживает любые природные явления.</li>
+                           <li>Хорошая светопроницаемость - это качество важно для дворов, где мало солнечных лучей;</li>
+                           <li>Длительный срок службы.</li>
+                           <li>Гибкость - поликарбонат можно выгнуть в любую дугу.</li>
+                           <li>Поликарбонат имеет толщину 8-10мм с УФ-защитой</li>
+                           <li>Низкая способность горения. Навес из поликарбоната имеет способность к самозатуханию.</li>
+                        </ul>
+                        <h3  id="calc">Гарантия 12 месяцев!</h3>
+                    </div>
+                    <div class="imageright"><img src="навесы/вид2.jpg" width="100%" height="100%"></div>
+
+                </div>
+            </div>
+
+
+
+            <div class="svai">КАЛЬКУЛЯТОР НАВЕСОВ ДЛЯ МАШИН </div>
+            <div class="calk_sw">
+                <div class="caleft">
+                    <div class="kalkulimg"> <img id="kalkyl" src="навесы/1.png" width="100%" height="100%"> 
+                        <h2 id="imgtext1" style="transform: rotate(270deg);position: absolute; top:220px; left: 0px;">2 м.</h2>
+                        <h2 id="imgtext2" style="transform: rotate(330deg);position: absolute; top:310px; right: 50px;">4 м.</h2>
+                        <h2 id="imgtext3" style="transform: rotate(8deg);position: absolute; top:365px; left: 150px;">2 м.</h2></div>
+                    <div class="block">
+                        <div class="rangeslider">
+                            <p class="zag">Длина навеса (в метрах)</p>
+                            <input class="znch" type="number" id="length_out" min="4" max="12" value="4" step="0.1">
+                            <input type="range" min="4" max="12" value="4" step="0.1" 
+                                class="myslider textt" id="length_in">
+                        </div>
+                    </div>
+                    <div class="block1">
+                        <div class="rangeslider">
+                            <p class="zag">Ширина навеса (в метрах)</p>
+                            <input class="znch" type="number" id="width_out" min="2" max="12" value="2" step="0.1">
+                            <input type="range" min="2" max="12" value="2" step="0.1" 
+                                class="myslider textt" id="width_in">
+                        </div>
+                    </div>
+                    <div class="block23">
+                        <div class="rangeslider">
+                            <p id="hui" class="zag">Высота навеса (в метрах)</p>
+                            <input class="znch" type="number" id="height_out" min="2" max="6" value="2" step="0.1">
+                            <input type="range" min="2" max="6" value="2" step="0.1" 
+                                class="myslider textt" id="height_in">
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="block24">
+                      <p class="zag">Тип крыши(фермы)</p>
+                        <div id="myDIV">
+                            <button class="btn active1" value="1"><img src="навесы/f1.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="2"><img src="навесы/f2.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="3"><img src="навесы/f3.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="4"><img src="навесы/f4.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="5"><img src="навесы/f5.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="6"><img src="навесы/f6.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="7"><img src="навесы/f7.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="8"><img src="навесы/f8.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="9"><img src="навесы/f9.jpg" height="100%" width="100%"></button>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="block2">
+                        <div class="block3">
+                            <p class="zag2">Выберите поликарбонат</p>
+                            <select id="mat" class="textt poli" name="select">
+                                <option selected value="1">Сотовый поликартонат 8мм</option>
+                                <option value="2">Сотовый поликартонат 10мм</option>
+                            </select>
+                        </div>
+                        <div class="block4">
+                            <p class="zag2">Цвет поликартоната</p>
+                            <select id="color_mat" class="textt colorr" name="select">
+                                <option selected value="1">Прозрачный</option>
+                                <option value="2">Бронза</option>
+                                <option value="3">Опал</option>
+                                <option value="4">Зеленый</option>
+                                <option value="5">Красный</option>
+                                <option value="6">Синий</option>
+                                <option value="7">Бирюза</option>
+                            </select>
+                        </div>
+                        <div class="block5">
+                            <p class="zag2">Окрас каркаса</p>
+                            <select id="okras" class="textt kark" name="select">
+                                <option selected value="1">Грунт</option>
+                                <option value="2">Хаммерайт, Дали 3 в 1</option> 
+                            </select>
+                        </div>
+
+  
+                        <div class="block6">
+                            <p class="zag2">Тип установки</p>
+                            <select id="type_ust" class="textt yst" name="select">
+                                <option selected value="1">На пятаки</option>
+                                <option value="2">Бетонирование</option> 
+                                <option value="3"> Без установки</option>
+                            </select>
+                        </div>
+
+                        <div class="block7">
+                            <p class="zag2">Размер столбов</p>
+                            <select id="razmer" class="textt stol" name="select">
+                                <option selected value="1">60*60</option>
+                                <option value="2">80*80</option>
+                                <option value="3">100*100</option>
+                            </select>
+                        </div>
+                        
+                        
+                        <div class="block8">
+                            <p class="zag2">Регион доставки</p>
+                            <select id="region" class="textt poli" name="select">
+                                <option selected value="1">Новосибирск</option>
+                                <option value="2">Новосибирская обл.</option>
+                                <option value="3">Другой город</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="butt2">Заказать навес</div>
+                    <div class="price1">
+                        <p class="odna">Стоимость материалов</p>
+                        <p class="odna">Стоимость доставки</p>
+                        <p class="odna" id="itogg">24412 рублей</p>
+                        <p class="odna" id="dostavka">1500 рублей</p>
+                    </div>
+                    <div class="price2">
+                        <p class="odna2">Итоговая стоимость</p>
+                        <p class="priceit" id="end"> рублей</p>
+                    </div>
+                   <!--  зависимости от выбранного с установкой или без, выводить одну цену, не 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    <div class="price3">
+                        <p class="odna2">Итоговая стоимость без монтажа</p>
+                        <p id="bezmon">2755 рублей</p>
+                    </div>
+                    <div class="price4">
+                        <p class="odna">Итоговая стоимость</p>
+                        <p id="itogg">3655 рублей</p>
+                    </div>-->
+                    <p class="toch">Расчеты могут иметь некоторую погрешность, в связи с изминением цен на металл и комплектующих. Данный расчет не является офертой, и точную стоимость может определить специалист, исходя из Ваших пожеланий, и места установки конструкции.</p>
+
+
+                    <div class="smeta">
+                      <p class=" zagsmeta"> Смета</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 52%;">Наименование</th>
+                                    <th style="width: 12%;">Кол-во</th>
+                                    <th style="width: 12%;">Ед.изм.</th>
+                                    <th style="width: 12%;">Цена</th>
+                                    <th style="width: 12%;">Сумма, Р</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Металлические столбы</td>
+                                    <td id="st_kol">4</td>
+                                    <td>шт.</td>
+                                    <td id="st_val">1340</td>
+                                    <td id="st_sum">5360</td>
+                                </tr>
+                                <tr>
+                                    <td>Подстропильная ферма</td>
+                                    <td>2</td>
+                                    <td>шт.</td>
+                                    <td id="podsferm_val">2400</td>
+                                    <td id="podsferm_sum">4800</td>
+                                </tr>
+                                <tr>
+                                    <td>Стропильная ферма</td>
+                                    <td id="sferm_kol">3</td>
+                                    <td>шт.</td>
+                                    <td id="sferm_val">2420</td>
+                                    <td id="sferm_sum">7260</td>
+                                </tr>
+                                <tr>
+                                    <td class="" >Лаги</td>
+                                    <td id="lag_kol">3</td>
+                                    <td>шт.</td>
+                                    <td id="lag_val">680</td>
+                                    <td id="lag_sum">2040</td>
+                                </tr>
+                                <tr>
+                                    <td>Сотовый поликарбонат</td>
+                                    <td id="pol_kol">8</td>
+                                    <td>кв.метр</td>
+                                    <td id="pol_val"> 490</td>
+                                    <td id="pol_sum">3920</td>
+                                </tr>
+                                 <tr>
+                                    <td>Соединительные профили</td>
+                                    <td>1</td>
+                                    <td>шт.</td>
+                                    <td id="soed_val">392</td>
+                                    <td id="soed_sum">392</td>
+                                </tr>
+                                 <tr>
+                                    <td id="okr_name">Окрашивание каркаса - Грунт</td>
+                                    <td id="okr_kol">8</td>
+                                    <td>кв.метр</td>
+                                    <td id="okr_val"> 80</td>
+                                    <td id="okr_sum">640</td>
+                                </tr>
+                                <tr>
+                                    <td id="stoim1" colspan="4">Стоимость материалов</td>
+                                    <td id="Sum">24412</td>
+                                </tr>
+                                <tr>
+                                    <td id="">Сборка навеса</td>
+                                    <td id="">8</td>
+                                    <td>кв.метр</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Установка столбов На пятаки</td>
+                                    <td id=""></td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Доставка</td>
+                                    <td id=""></td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="stoim2" colspan="4">Стоимость работ+доставка</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Амортизация оборудования и расходники</td>
+                                    <td id=""></td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr id="otvet">
+                                    <td id="stoim3" colspan="4">Итого</td>
+                                    <td id=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div id="test" class="quests">
+            <div class="maroon4">ОТВЕТЫ НА ПОПУЛЯРНЫЕ ВОПРОСЫ </div>
+            <div class="quest1">
+                <div class="icon1">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler1">Можно ли заказать сваи без монтажа?</a>
+                <div class="spoiler_body">
+                    <p>Да, вы можете купить и без монтажа. Стоимость материалов, вы можете посчитать на <a href="#calc">нашем калькуляторе</a>. </p>
+                </div>
+            </div>
+            <div class="quest5">
+                <div class="icon5">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler5">Какие способы оплаты у вас есть?</a>
+                <div class="spoiler_body">
+                    У нас есть оплата наличными и безналичными, как вам удобно. 
+                    Мы работаем по предоплате в 70% с заключением договора. <br>
+                </div>
+            </div>
+            <div class="quest2">
+                <div class="icon2">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler2">Почему поликарбонат лучше, чем другой материал?</a>
+                <div class="spoiler_body">
+                    Навесы из поликарбоната безопасны, в отличии от стекла(которое может разбиться из-за плохох погодных условий).<br>
+                    Стоимость матералов для такого навеса ниже, чем из других материалов.<br>
+                    Более подробно вы можете прочитать в <a href="">преимуществах навесов из поликарбоната. </a>
+                </div>
+            </div>
+            <div class="quest6">
+                <div class="icon6">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler6">Какой срок службы навеса?</a>
+                <div class="spoiler_body">
+                    Срок службы нашего сотового поликарбоната может достигать более 25 лет, и при этом все первоначальные свойства не ухудшаются.
+                </div>
+            </div>
+               <div  id="o_zakaz" class="quest9">
+                <div class="icon9">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler9"> Влияет ли климат на навес из поликарбоната?</a>
+                <div class="spoiler_body">
+                    Оптимальный диапазон, при котором сохраняются технические параметры, составляет от -50 до +125 градусов. А также выдерживает любые природные явления.
+                </div>
+            </div>
+           <!-- <div class="quest3">
+                <div class="icon3">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler3">На каких грунтах можно ипсользовать винтовые сваи?</a>
+                <div class="spoiler_body">
+                    Свайно – винтовой фундамент достаточно удобен при возведении построек на любой местности, в том числе и на воде, замерзших почвах. <br>
+                    Такой фундамент можно возвести на любом проблемном грунте(почва, просадочные глинистые грунты и др.) или на рельефах с неровностями.
+                </div>
+            </div>
+            
+            <div class="quest7">
+                <div class="icon7">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler7">В чём отличие однолопастных и двулопастных свай?</a>
+                <div class="spoiler_body">
+                    По количеству лопастей у нас есть два вида винтовых свай: одно- и двулопастные. <br>
+                    Первые предназначены исключительно для плотных грунтов с малой подвижностью.Вторые более универсальны, хотя главное их назначение – слабые грунты с малой несущей способностью, сваи устойчивее к различным видам нагрузок.
+                </div>
+            </div>
+            <div class="quest8">
+                <div class="icon8">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler8">Используете ли вы что-то для защиты от коррозии?</a>
+                <div class="spoiler_body">
+                    Коррозия-это самопроизвольное разрушение металла, под воздействием агрессивной среды.<br>
+                    Для снижения влияния коррозионных процессов на сваи мы увеличиваем толщину ее стенок и наносим дополнительное защитное покрытие,чтобы фундамент на винтовых сваях служил долго.
+                </div>
+            </div>-->
+         
+        </div>
+<h2 id="zakaz" class="headerform">Оставить заявку</h2>
+        <div class="forma">
+            <form class="contact_form" action="#" method="post" name="contact_form">
+                <ul>
+                    <li>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text"  placeholder="Введите имя" required />
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" placeholder="Введите почту" required />
+                        <span class="form_hint">В формате "name@mmm.com"</span>
+                    </li>
+                    <li>
+                        <label for="message">Текст заявки:</label>
+                        <textarea name="message" cols="40" rows="6" required ></textarea>
+                    </li>
+                    <li>
+                        <button class="submit" type="submit">Отправить заявку</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+<footer id="o_kont" style="height: 100px; background-color: black;color:#ffbc13; padding-top: 3%;padding-bottom: 3%; ">
+            <div class="kont1">
+                <p>г.Новосибирск</p>
+                <p>ул.Ельцовская 37</p>
+            </div>
+            <div class="kont2">
+                <a href="tel:+79232220866"> +7 (923) 222-08-66 </a><br>
+                <a href="tel:+73832865201"> +7 (383) 286-52-01 </a><br>
+                <a href="tel:+79137895415"> +7 (913) 789-54-15 </a>
+            </div>
+            <div class="kont3">
+                <p>E-mail:</p>
+                <a href="mailto:Amigo2017.nsk@mail.ru">Amigo2017.nsk@mail.ru </a>
+            </div>
+            <div class="kont4">
+                <p>Без обеда и выходных</p>
+                <p>9:00-20:00</p>
+            </div>
+</footer>
+
+</div>
+
+<script>
+            var header = document.getElementById("myDIV");
+            var btns = header.getElementsByClassName("btn");
+            var length_in = document.getElementById("length_in");
+            var length_out = document.getElementById("length_out");
+            var width_in = document.getElementById("width_in");
+            var width_out = document.getElementById("width_out");
+            var height_in = document.getElementById("height_in");
+            var height_out = document.getElementById("height_out");
+            var mat = document.getElementById("mat");
+            var color_mat = document.getElementById("color_mat");
+            var razmer = document.getElementById("razmer");
+            var okras = document.getElementById("okras");
+            var type_ust = document.getElementById("type_ust");
+            var region = document.getElementById("region");
+            var imgg = document.getElementById("kalkyl");
+            function S(){
+                return width_out.value*length_out.value;
+            }
+            function val_st(){            
+                if(razmer.value==1) return (height_out.value-2)*600+1340;
+                if(razmer.value==2) return (height_out.value-2)*1100+2400;
+                if(razmer.value==3) return (height_out.value-2)*1400+3200;
+            }
+            function val_posferm(){            
+                if(razmer.value==1) return (length_out.value-4)*600+2400;
+                if(razmer.value==2) return (length_out.value-4)*1100+4400;
+                if(razmer.value==3) return (length_out.value-4)*1400+5600;
+            }
+             function val_sferm(){         
+              var current = document.getElementsByClassName("active1");
+              if(current[0].value==1 || current[0].value==3 || current[0].value==6) return (width_out.value-2)*1150+2420;
+              else return (width_out.value-2)*1150+2200;
+            }
+            function kol_lag(){
+                if (width_out.value<=2.3) return 3;
+                if (width_out.value<=2.8) return 4;
+                if (width_out.value<=3.3) return 5;
+                if (width_out.value<=3.8) return 6;
+                if (width_out.value<=4.3) return 7;
+                if (width_out.value<=4.8) return 8;
+                if (width_out.value<=5.3) return 9;
+                if (width_out.value<=5.8) return 10;
+                if (width_out.value<=6.3) return 11;
+                if (width_out.value<=6.8) return 12;
+                if (width_out.value<=7.3) return 13;
+                if (width_out.value<=7.8) return 14;
+                if (width_out.value<=8.3) return 15;
+                if (width_out.value<=8.8) return 16;
+                if (width_out.value<=9.3) return 17;
+                if (width_out.value<=9.8) return 18;
+                if (width_out.value<=10.3) return 19;
+                if (width_out.value<=10.8) return 20;
+                if (width_out.value<=11.3) return 21;
+                if (width_out.value<=11.8) return 22;
+                if (width_out.value<=12) return 23;
+            }
+
+            function val_lag(){
+                return (length_out.value-4)*170+680;
+            }
+
+            function val_pol(){
+                if(mat.value==1)
+                {
+                    if ((color_mat.value == 1) || (color_mat.value == 2)) return 490;
+                    else return 515;
+                }
+                else 
+                {
+                    if (color_mat.value == 1 || color_mat.value == 2) return 590;
+                    else return 620;
+                }
+            }
+            function val_soed(){
+                if(mat.value==1)
+                {
+                    return (width_out.value-2)*200+(length_out.value-4)*100+392;
+                }
+                else
+                {
+                    return (width_out.value-2)*230+(length_out.value-4)*120+472;
+                }
+            }
+            function val_okr(){
+                if(okras.value==1) return 80;
+                else return 300;
+            }
+
+            function Sum(){
+                var ssss = 0;
+                ssss = parseInt($('#st_sum').text())+parseInt($('#podsferm_sum').text())+parseInt($('#sferm_sum').text())+parseInt($('#lag_sum').text())+parseInt($('#okr_sum').text())+parseInt($('#pol_sum').text())+parseInt($('#soed_sum').text());
+                return ssss;
+            }
+            razmer.oninput = function()
+            {
+              $('#st_val').text(val_st());
+              $('#st_sum').text(val_st()*$('#st_kol').text());
+              $('#podsferm_val').text(val_posferm());
+              $('#podsferm_sum').text(val_posferm()*2);
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+            }
+
+
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active1");
+                current[0].className = current[0].className.replace(" active1", "");
+                this.className += " active1";
+                imgg.src ="навесы/" + this.value + ".png";
+                $('#sferm_val').text(val_sferm());
+                $('#sferm_sum').text(val_sferm()*$('#sferm_kol').text());
+                $('#Sum').text(Sum());
+                $('#itogg').text(Sum()+"  рублей");
+              });
+            }
+
+            length_in.oninput = function()
+            {
+              length_out.value = this.value;
+              if(this.value>=4) $('#st_kol').text('4');
+              if(this.value>5) $('#st_kol').text('6');
+              if(this.value>7.5) $('#st_kol').text('8');
+              $('#st_sum').text(val_st()*$('#st_kol').text());
+              if(this.value==4) $('#sferm_kol').text('3');
+              if(this.value>4) $('#sferm_kol').text('4');
+              if(this.value>6) $('#sferm_kol').text('5');
+              if(this.value>8) $('#sferm_kol').text('6');
+              if(this.value>10) $('#sferm_kol').text('7');
+
+              $('#podsferm_val').text(val_posferm()); 
+              $('#podsferm_sum').text(val_posferm()*2);
+              $('#sferm_val').text(val_sferm());
+              $('#sferm_sum').text(val_sferm()*$('#sferm_kol').text());
+              $('#pol_kol').text(S());
+              $('#pol_sum').text(val_pol()*$('#pol_kol').text());
+              $('#soed_val').text(val_soed());
+              $('#soed_sum').text(val_soed());
+              $('#okr_kol').text(S());
+              $('#okr_sum').text(S()*$('#okr_val').text());
+              $('#lag_val').text(val_lag())
+              $('#lag_sum').text(kol_lag()*val_lag());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+              $('#imgtext2').text(this.value + ' м.');
+            }
+            length_out.oninput = function()
+            {
+              if(length_out.value > 12) length_out.value = 12;
+              length_in.value = this.value;
+              if(this.value>4) $('#st_kol').text('4');
+              if(this.value>5) $('#st_kol').text('6');
+              if(this.value>7.5) $('#st_kol').text('8');
+              $('#st_sum').text(val_st()*$('#st_kol').text());
+              if(this.value==4) $('#sferm_kol').text('3');
+              if(this.value>4) $('#sferm_kol').text('4');
+              if(this.value>6) $('#sferm_kol').text('5');
+              if(this.value>8) $('#sferm_kol').text('6');
+              if(this.value>10) $('#sferm_kol').text('7');
+              $('#podsferm_val').text(val_posferm()); 
+              $('#podsferm_sum').text(val_posferm()*2);
+              $('#sferm_val').text(val_sferm());
+              $('#sferm_sum').text(val_sferm()*$('#sferm_kol').text());
+              $('#pol_kol').text(S());
+              $('#pol_sum').text(val_pol()*$('#pol_kol').text());
+              $('#soed_val').text(val_soed());
+              $('#soed_sum').text(val_soed());
+              $('#okr_kol').text(S());
+              $('#okr_sum').text(S()*$('#okr_val').text());
+              $('#lag_val').text(val_lag())
+              $('#lag_sum').text(kol_lag()*val_lag());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+              $('#imgtext2').text(this.value + ' м.');
+            }
+            width_in.oninput = function()
+            {
+              width_out.value = this.value;
+              $('#sferm_val').text(val_sferm());
+              $('#sferm_sum').text(val_sferm()*$('#sferm_kol').text());
+              $('#lag_kol').text(kol_lag());
+              $('#lag_sum').text(kol_lag()*val_lag());
+              $('#pol_kol').text(S());
+              $('#pol_sum').text(val_pol()*$('#pol_kol').text());
+              $('#soed_val').text(val_soed());
+              $('#soed_sum').text(val_soed());
+              $('#okr_kol').text(S());
+              $('#okr_sum').text(S()*$('#okr_val').text());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+              $('#imgtext3').text(this.value + ' м.');
+            }
+            width_out.oninput = function()
+            {
+              if(width_out.value > 12) width_out.value = 12;
+              width_in.value = this.value;
+              $('#sferm_val').text(val_sferm());
+              $('#sferm_sum').text(val_sferm()*$('#sferm_kol').text());
+              $('#lag_kol').text(kol_lag());
+              $('#lag_sum').text(kol_lag()*val_lag());
+              $('#pol_kol').text(S());
+              $('#pol_sum').text(val_pol()*$('#pol_kol').text());
+              $('#soed_val').text(val_soed());
+              $('#soed_sum').text(val_soed());
+              $('#okr_kol').text(S());
+              $('#okr_sum').text(S()*$('#okr_val').text());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+              $('#imgtext3').text(this.value + ' м.');
+            }
+            height_in.oninput = function()
+            {
+              height_out.value = this.value;
+              $('#st_val').text(val_st());
+              $('#st_sum').text(val_st()*$('#st_kol').text());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+              $('#imgtext1').text(this.value + ' м.');
+            } 
+            height_out.oninput = function()
+            {
+              if(height_out.value > 6) height_out.value = 6;
+              height_in.value = this.value;
+              $('#st_val').text(val_st());
+              $('#st_sum').text(val_st()*$('#st_kol').text());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+              $('#imgtext1').text(this.value + ' м.');
+            }
+            mat.oninput = function()
+            {
+              $('#pol_val').text(val_pol());
+              $('#pol_sum').text(val_pol()*$('#pol_kol').text());
+              $('#soed_val').text(val_soed());
+              $('#soed_sum').text(val_soed());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+            }
+            color_mat.oninput = function()
+            {
+                $('#pol_val').text(val_pol());
+                $('#pol_sum').text(val_pol()*$('#pol_kol').text());
+                $('#Sum').text(Sum());
+                $('#itogg').text(Sum()+"  рублей");
+            }
+            
+            okras.oninput = function()
+            {
+              $('#okr_val').text(val_okr());
+              if(this.value==1) $('#okr_name').text('Окрашивание каркаса - Грунт');
+              else $('#okr_name').text('Окрашивание каркаса - Хаммерайт, Дали 3 в 1');
+              $('#okr_sum').text(S()*$('#okr_val').text());
+              $('#Sum').text(Sum());
+              $('#itogg').text(Sum()+"  рублей");
+            }
+            type_ust.oninput = function()
+            {
+              
+            }
+            region.oninput = function()
+            {
+              
+            }
+        </script>
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            $(function(){
+            if($('.nurdsami_pgernlab>ul>li').hasClass('selected')){
+            $('.selected').addClass('active');
+            var currentleft=$('.selected').position().left+"px";
+            var currentwidth=$('.selected').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            else{
+            $('.nurdsami_pgernlab>ul>li').first().addClass('active');
+            var currentleft=$('.active').position().left+"px";
+            var currentwidth=$('.active').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            $('.nurdsami_pgernlab>ul>li').hover(function(){
+            $('.nurdsami_pgernlab ul li').removeClass('active');
+            $(this).addClass('active');
+            var currentleft=$('.active').position().left+"px";
+            var currentwidth=$('.active').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            },function(){
+            if($('.nurdsami_pgernlab>ul>li').hasClass('selected')){
+            $('.selected').addClass('active');
+            var currentleft=$('.selected').position().left+"px";
+            var currentwidth=$('.selected').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            else{
+            $('.nurdsami_pgernlab>ul>li').first().addClass('active');
+            var currentleft=$('.active').position().left+"px";
+            var currentwidth=$('.active').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            });
+            });
+            let windowWidth=$(window).innerWidth();
+              windowWidth=(windowWidth-1200)/2;
+              
+              $('#ots').width(windowWidth)
+              //$('.topnav').css("padding-right", windowWidth + "px");
+            
+        </script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+        <script type="text/javascript">
+$(document).ready(function(){
+
+    // = Вешаем событие прокрутки к нужному месту
+    //   на все ссылки якорь которых начинается на #
+    $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+
+});
+</script>
+    </body>
+</html>
