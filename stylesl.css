@@ -8,6 +8,7 @@ html { height: 100%; }
 {
 	        font-size: 34px;
 	        font-style: italic;
+	        font-weight: bold;
             color:#87111C;
             font-family: "Playfair";
             padding-top: 3%;
@@ -248,8 +249,13 @@ a{text-decoration:none; }
 	display: inline-block;
 	font-family: 'Playfair';
 	font-style: italic;
-	font-weight: 400;
-
+	letter-spacing: 1px;
+	font-weight: 600;
+	color: #87111C;
+	padding-left: 10%;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 0;
 }
 
 
@@ -313,7 +319,7 @@ a{text-decoration:none; }
 }
 
 
-.mi-slider ul li p, .mi-slider ul li h4
+.mi-slider ul li p 
 {
 	padding-left: 10%;
 	margin: 0;
