@@ -21,6 +21,42 @@
                   margin:0;
                   padding: 0;
             }
+
+            @font-face{
+                font-family: 'Robots';
+                src: url('fonts/Roboto/RobotoCondensed-Light.ttf') format('truetype');
+                font-weight: 400;
+                font-style: normal;
+            }
+
+
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair_bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+            }
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair_ital.ttf') format('truetype');
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair_it_bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: italic;
+            }
            
             .menu
             {quotes: 1px;
@@ -93,8 +129,10 @@
 
 
             a{ text-decoration: none;
-              color: #ffbc13;
-              font-family: arial;}
+              color: #87111C;
+              font-family: arial;
+              font-weight: bold;
+            }
 
             /*spoiler start*/
             .spoiler_body 
@@ -460,8 +498,11 @@
 
             /*КАЛЬКУЛЯТОР конец*/
             body {
+            margin:0;
             background: url(фон2.jpg);
-            font-size: 18px;
+            font-size:21px;
+            font-family: "Robots";
+            color: #262630;
             }
             h2
             {
@@ -802,13 +843,14 @@
             {margin:0;
             font-family: georgia;
             }
+            /*nav*/
             .nurdsami_pgernlab a{
             text-decoration:none;
             }
             .nurdsami_pgernlab{
             height:70px;
-            background:#ffbc13;
-            color:black;
+            background:#87111C;
+            color:#262630;
             position:sticky;
             width: 100%;
             top: 0;
@@ -838,14 +880,14 @@
             }
             .nurdsami_pgernlab>ul>li>ul a {
             display: block;
-            color: black;
-            width: 150px;
+            color: white;
+            width: 170px;
             line-height: 50px !important;
             font: 700 14px;
             background: #565151;
             border-bottom: 1px solid #8a8686;
-            text-align: center;
-            padding: 0 5px;
+            text-align: left;
+            padding-left: 10px;
             height: 0;
             overflow: hidden;
             opacity: 0;
@@ -859,8 +901,11 @@
             position:relative;
             }
             .nurdsami_pgernlab>ul>li>a{
-            padding:0 20px;
-            color:black;
+            padding:0 40px;
+            color:white;
+            font-family: 'Playfair';
+            letter-spacing:2px;
+            font-style: italic;
             display:block;
             line-height:70px !important;
             font:400 15px;
@@ -870,7 +915,7 @@
             .lamp span{
             display:block;
             height:4px;
-            background:black;
+            background:#fff663;
             position: relative;
             }
             .lamp span:after {
@@ -883,7 +928,7 @@
             position: absolute;
             pointer-events: none;
             border-color: rgba(238, 102, 102, 0);
-            border-bottom-color: black;
+            border-bottom-color: #fff663;
             border-width: 4px;
             margin-left: -4px;
             }
@@ -954,9 +999,9 @@
             /* Container for image text */
             .caption-container {
             text-align: center;
-            background-color: #222;
+            background-color: #262630;
             padding: 2px 16px;
-            color: white;
+            color: #fff663;
             }
             .row:after {
             content: "";
@@ -970,7 +1015,7 @@
             }
             /* Add a transparency effect for thumnbail images */
             .demo {
-            opacity: 0.6;
+            opacity: 0.8;
             }
             .active,
             .demo:hover {
@@ -979,6 +1024,7 @@
             .q{
             vertical-align: middle;
             }
+            /*nav end*/
         </style>
     </head>
     <body>

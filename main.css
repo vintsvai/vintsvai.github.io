@@ -1,91 +1,23 @@
 
 
-/*main start*/
+ /*body
+            {
+                margin: 0 ;
+                padding: 0 ;
+            }
+            header
+            {
+                width: 100%;
+                height: 70px;
+                position: relative;
+                margin: auto;
+                max-width: 1200px;
 
-body
-{
-    margin: 0 ;
-    padding: 0 ;
-}
-header
-{
-    width: 100%;
-    height: 70px;
-    position: relative;
-    margin: auto;
-    max-width: 1200px;
-
-}
+            }
 
 
-.menu
-{
-    max-width: 1920px;
-    background-color: white;
-    height: 170px;
-    margin:0;
-    padding: 0 ;
-}
 
-.headd
-{
-    max-width: 1200px;
-    margin: auto;
-    height: 170px;
-    padding: 0 ;
-}
-#logim
-{
-    float: left;
-    width: 40%;
-    height: 120px;
-    padding: 0;
-    margin: 0;
-}
-#rightup
-{
-    float: right;
-    width: 45%;
-    height: 120px;
-    padding-left: 5%;
-    text-align: left;
-    font-size: 23px;
-} 
-.marker
-{
-     list-style-image: url(111.png);
-}
-.marker2
-{
- }
-#leftdown
-{
-    float: left;
-    font-size: 20px;
-    width: 29%;
-    height: 38px;
-    font-size: 23px;
-    text-align: left;
-    margin-top:0;
-    padding-top: 12px; 
-    padding-left: 11%;
-}
-#butt
-{
-    float: left;
-    width: 20%;
-    height: 40px;
-    background-color: red;
-    border-radius: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-    padding: 0;
-    margin-left: 17%;
-}
-/*main end*/
-
-/*нав*/
+нав
 
 nav {  
     z-index: 9999;
@@ -103,7 +35,7 @@ nav {
     
     /*border-bottom: 1px solid #283744;  */
     /*background-color: rgba(255,0,0, 0);*/
-    /*transition: all 0.4s cubic-bezier(0.10,0.1,1,1); */
+    /*transition: all 0.4s cubic-bezier(0.10,0.1,1,1); 
 }
 nav ul {
     border: 0;
@@ -191,6 +123,192 @@ nav a {
     /*text-shadow: 1px 1px 0px #000;  
     opacity: 1;
 }  */
+
+
+
+            /*nav*/
+            .nurdsami_pgernlab a{
+            text-decoration:none;
+            }
+            .nurdsami_pgernlab{
+            height:70px;
+            background:#87111C;
+            color:#262630;
+            position:sticky;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            clear: both;
+            }
+            .nurdsami_pgernlab>ul{
+            position:relative;
+            list-style:none;
+            padding:0;
+            margin:0;
+            }
+            .nurdsami_pgernlab>ul>li>ul{
+            position:absolute;
+            left:0;
+            padding:0;
+            margin:0;
+            list-style:none;
+            }
+            .nurdsami_pgernlab>ul>li:hover>ul li a{
+            opacity:1;
+            height:50px;
+            transition:all .3s linear;
+            -o-transition:all .3s linear;
+            -moz-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            }
+            .nurdsami_pgernlab>ul>li>ul a {
+            display: block;
+            color: white;
+            width: 170px;
+            line-height: 50px !important;
+            font: 700 14px;
+            background: #565151;
+            border-bottom: 1px solid #8a8686;
+            text-align: left;
+            padding-left: 10px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .3s linear .2s;
+            -o-transition: all .3s linear .2s;
+            -moz-transition: all .3s linear .2s;
+            -webkit-transition: all .3s linear .2s;
+            }
+            .nurdsami_pgernlab>ul>li{
+            float:right;
+            position:relative;
+            }
+            .nurdsami_pgernlab>ul>li>a{
+            padding:0 40px;
+            color:white;
+            font-family: 'Playfair';
+            letter-spacing:2px;
+            font-style: italic;
+            display:block;
+            line-height:70px !important;
+            font:400 15px;
+            text-transform:uppercase;
+            text-decoration:none;
+            }
+            .lamp span{
+            display:block;
+            height:4px;
+            background:#fff663;
+            position: relative;
+            }
+            .lamp span:after {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(238, 102, 102, 0);
+            border-bottom-color: #fff663;
+            border-width: 4px;
+            margin-left: -4px;
+            }
+            .lamp{
+            position:absolute !important;
+            height:4px;
+            top:66px;
+            background:#333;
+            transition:all .3s linear;
+            -o-transition:all .3s linear;
+            -moz-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            }
+            #ots
+            {
+            height: 10px;
+            float:right;
+            width: 10px;
+            }
+            /* Position the image container (needed to position the left and right arrows) */
+            .container {
+            position: relative;
+            max-width: 1200px;
+            margin:auto;
+            }
+            /* Hide the images by default */
+            .mySlides {
+            display: none;
+            }
+            /* Add a pointer when hovering over the thumbnail images */
+            .cursor {
+            cursor: pointer;
+            }
+            /* Next & previous buttons */
+            .prev,
+            .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            }
+            /* Position the "next button" to the right */
+            .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            }
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+            /* Container for image text */
+            .caption-container {
+            text-align: center;
+            background-color: #262630;
+            padding: 2px 16px;
+            color: #fff663;
+            }
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+            /* Six columns side by side */
+            .column {
+            float: left;
+            width: 16.66%;
+            }
+            /* Add a transparency effect for thumnbail images */
+            .demo {
+            opacity: 0.8;
+            }
+            .active,
+            .demo:hover {
+            opacity: 1;
+            }
+            .q{
+            vertical-align: middle;
+            }
+            /*nav end*/
+
 @keyframes animate {
   0% {
     top: calc(50% - 2px);
