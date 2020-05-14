@@ -1,822 +1,1868 @@
-  /*spoiler start*/
-.spoiler_body 
-{    
-    font-weight: normal; 
-    display: none;
-    padding-top: 10px;
-    margin-right: 5%;
-    width: 95%;
-    color: black;
-    font-size: 18px;
-}
-.spoiler1,.spoiler2,.spoiler3,.spoiler4,.spoiler5,.spoiler6,.spoiler7,.spoiler8,.spoiler9
-{ 
-    color:black;
-    font-size: 22px;
-    cursor: pointer; 
-    text-decoration: none; 
-    
-}
-
-
-.quests
-{
-    padding-top: 80px;
-    padding-bottom: 80px;
-    width: 100%;
-    text-align: left;
-    background-color: #fac2b1;
-}
-.icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9
-{
-    width: 28px;
-    height: 28px;
-    border-radius: 14px;
-    float:right;
-    margin-right: 20px;
-    transition: 0.4s;
-    
-}
-.icon1.fix11,.icon2.fix21,.icon3.fix31,.icon4.fix41,.icon5.fix51,.icon6.fix61,.icon7.fix71,.icon8.fix81,.icon9.fix91
-{
-    background-color: #e6e6fa;
-}
-.icon1.fix12,.icon2.fix22,.icon3.fix32,.icon4.fix42,.icon5.fix52,.icon6.fix62,.icon7.fix72,.icon8.fix82,.icon9.fix92
-{
-    
-    transform: rotate(45deg);
-    transition: 0.4s;
-
-}
-.quest1,.quest2,.quest3,.quest4,.quest5,.quest6,.quest7,.quest8,.quest9
-{
-    padding-top: 30px;
-    padding-left: 50px;
-    margin-left: 22%;
-    font-weight: bold;
-    background-color: white;
-    width: 56%;
-    padding-bottom: 25px;
-    margin-bottom: 1px;
-    cursor: pointer;
-}
-
-/*spoiler end*/
-
-
-
-/*КАЛЬКУЛЯТОР начало*/
-.slider {
-width:200px;
-height:11px;
-top:-30px;
-background:#eee;
-position:relative;
-margin:0 130px;
-padding:0 10px;
-}
-.slider1 {
-width:200px;
-height:11px;
-top:-30px;
-background:#eee;
-position:relative;
-margin:0 130px;
-padding:0 10px;
-}
-
-.ui-slider-handle {
-width:24px;
-height:24px;
-position:absolute;
-top:-7px;
-margin-left:-12px;
-z-index:200;
-background:#fc0;
--webkit-border-radius: 50px;
--moz-border-radius: 50px;
-border-radius: 50px;
-}
-
-.ui-widget-header {
-background:#f00;
-height:8px;
-left:1px;
-top:1px;
-position:absolute;
-}
-
-.textt
-{
-  border:3px solid #ffbc13;
-  border-radius: 7px; 
-   -webkit-border-radius: 7px; 
-   -moz-border-radius: 7px;
-   font-size: 18px; 
-}
-
-
-.kol
-{
-  border:3px solid #ffbc13;
-  border-radius: 7px; 
-   -webkit-border-radius: 7px; 
-   -moz-border-radius: 7px;
-   font-size: 18px; 
-   width: 150px;
-   padding-left: 15px;
-   height: 25px;
-   margin-top: 0;
-   margin-top: 0;
-}
-
-.gorod
-{
-  width: 250px;
-  height: 34px;
-}
-
-.zag
-{
-  text-align: left;
-  padding-bottom: 2%;
-  margin-top:0;
-}
-
-.zag1
-{
-  text-align: left;
-  padding-bottom: 3%;
-
-  margin-top:0;
-}
-
-.zag2
-{
-  text-align: left;
-  padding-bottom: 0;
-
-
-  margin-top:0;
-}
-
-.znch
-{
-  position: relative;
-  border:3px solid #ffbc13;
-  border-radius: 7px; 
-   -webkit-border-radius: 7px; 
-   -moz-border-radius: 7px;
-   font-size: 18px; 
-  width: 50px;
-  height: 25px;
-  top:-10px;
-  text-align: center;
-}
-
-
-.znch2
-{
-  position: relative;
-  width: 57px;
-  height: 34px;
-
-  text-align: center;
-}
-
-
-
-
-.calk_sw
-{
-  max-width: 1200px;
-  background-color: white;
-  margin: auto;
-}
-.caleft
-{
-  width: 80%;
-  margin: auto;
-  height: 1500px;
-  background-color: white;
-  border: 0px solid black;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-
-.kalkulimg
-{
-  float: right;
-  width: 54%;
-  height: 463.5px;
-  margin-top: 6%;
-  padding-bottom: 12px;
-  border: 0px solid grey;
-}
-
-.block
-{
-  width: 39%;
-  padding-top: 6%;
-   float: left;
-}
-.block1
-{
-  width: 39%;
-  margin-right: 6%;
-  float: left;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  border-bottom: 1px solid grey; 
-}
-
-.block2
-{
-  width: 45%;
-  float: left;
-  height: 100px;
-}
-
-.block3
-{
-  width: 42%;
-  float: left;
-  padding-bottom: 2%;
-  padding-top: 5%;
-  border-bottom: 1px solid grey;
-  height: 80px;
-}
-
-.block4
-{
-  width: 43%; 
-  float: left;
-  padding-left: 3%;
-  padding-bottom: 2%;
-  padding-top: 5%;
-   margin-right: 12%;
-  border-bottom: 1px solid grey;
-  height: 80px;
-}
-
-.block5
-{
-  width: 100%;
-  float: left;
-  padding-top: 3%;
-}
-
-.rangeslider{
-    width: 100%;
-
-}
-.myslider {
-    -webkit-appearance: none;
-    background: #FCF3CF  ;
-    width: 50%;
-    height: 25px;
-    opacity: 2;
-     border-radius: 150px;
-   }
-  
-.myslider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    cursor: pointer;
-    background: maroon  ;
-    width: 14%;
-    height: 25px;
-    border-radius: 150px;
-  }  
-  .myslider:hover {
-    opacity: 1;
-}
-
-
-
-.price
-{
-  float: right;
-  width: 46%;
-  padding-top: 3%;
-  padding-left: 3%;
-  margin-top: 8%;
-  border: 1px solid grey;
-}
-.price1
-{
-  float: left;
-  width: 46%;
-  padding-top: 3%;
-  padding-left: 3%;
-  margin-top: 8%;
-  border: 1px solid grey;
-}
-.price3
-{
-  float: left;
-  width: 46%;
-  padding-top: 3%;
-  padding-left: 3%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  border: 1px solid grey;
-}
-
-
-#end
-{
-  font-size: 33px;
-  font-weight: bold;
-  margin-top: 1%;
-   margin-bottom: 2%;
-   float: left;
-}
-
-
-.odna
-{
-  float: left;
-  width: 100%;
-  padding-top: 0;
-  margin-top: 0;
-}
-
-
-.odna1
-{
-  float: left;
-  padding-top: 0;
-  margin-top: 0;
-   margin-top: 1%;
-   padding-left: 20px;
-   font-size: 30px;
-  font-weight: bold;
-}
-
-
-/*КАЛЬКУЛЯТОР конец*/
-
-/*nav*/
- body
-  {margin:0;}
- .nurdsami_pgernlab a{
-  text-decoration:none;
-}
-.nurdsami_pgernlab{
-  height:70px;
-  background:#222;
-  position:sticky;
-  width: 100%;
-  top: 0;
-  z-index: 99999;
-}
-.nurdsami_pgernlab>ul{
-  position:relative;
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.nurdsami_pgernlab>ul>li>ul{
-  position:absolute;
-  left:0;
-  padding:0;
-  margin:0;
-  list-style:none;
-}
-.nurdsami_pgernlab>ul>li:hover>ul li a{
-  opacity:1;
-  height:50px;
-  transition:all .3s linear;
-  -o-transition:all .3s linear;
-  -moz-transition:all .3s linear;
-  -webkit-transition:all .3s linear;
-}
-.nurdsami_pgernlab>ul>li>ul a {
-  display: block;
-  color: #fff;
-  width: 150px;
-  line-height: 50px !important;
-  font: 700 14px 'pt sans',sans-serif;
-  background: #565151;
-  border-bottom: 1px solid #8a8686;
-  text-align: center;
-  padding: 0 5px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all .3s linear .2s;
-  -o-transition: all .3s linear .2s;
-  -moz-transition: all .3s linear .2s;
-  -webkit-transition: all .3s linear .2s;
-}
-.nurdsami_pgernlab>ul>li{
-  float:right;
-  position:relative;
-}
-.nurdsami_pgernlab>ul>li>a{
-  padding:0 20px;
-  color:#fff;
-  display:block;
-  line-height:70px !important;
-  font:400 15px 'PT Sans', sans-serif;
-  text-transform:uppercase;
-  text-decoration:none;
-}
-.lamp span{
-  display:block;
-  height:4px;
-  background:#ee6666;
-  position: relative;
-}
-.lamp span:after {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(238, 102, 102, 0);
-  border-bottom-color: #ee6666;
-  border-width: 4px;
-  margin-left: -4px;
-}
-.lamp{
-  position:absolute !important;
-  height:4px;
-  top:66px;
-  background:#333;
-  transition:all .3s linear;
-  -o-transition:all .3s linear;
-  -moz-transition:all .3s linear;
-  -webkit-transition:all .3s linear;
-}
-#ots
-{
-  height: 10px;
-  
-  float:right;
-  width: 10px;
-}
-
-/*nav*/
-
-
-/*галерея*/
-* {
-  box-sizing: border-box;
-}
-
-img {
-  vertical-align: middle;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-  max-width: 1200px;
-  margin:auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-/*галерея*/
-
-
-
-body {
-  background: url(фон2.jpg);
-    font-size: 18px;
-}
-
-h2
-{
-  text-align: center;
-  padding-top: 15px;
-}  
-
-input:focus { outline: none; }
- input:active{ outline: none; }
-.main
-{
-  max-width: 1200px;
-    margin: auto;
-    margin-top: 25px;
-    background: white;
-}
-
-
-
-
-.past 
-{
-  height: 1710px;
-  padding-left: 60px;
-   padding-right: 60px;
-  width: 1080px;
-
-}
-
-
-
-.past1
-{
-  width: 100%;
-  height: 460px;
- 
-  margin: 0;
-  padding: 0;
-}
-
-.svai
-{
-  background-color: #ffbc13;
-  width: 100%;
-  font-weight:bold;
-  padding-top: 30px;
-  height: 70px;
-  font-size: 32px;
-  text-align: center;
-
-}
-
-.headerleft
-{
-   padding-left: 2%;
-   padding-right: 2%;
-   border-bottom: 2px solid maroon; 
-  
-   float: left;
-   font-size: 22px;
-}
-
-.headerleft2
-{
-   width: 100%;
-   float: left;
-   padding-top: 0;
-   margin-top: 0;
-}
-
-.headerleft3
-{
-   padding-left: 2%;
-   padding-right: 2%;
-   border-bottom: 2px solid maroon; 
-   
-   float: left;
-   font-size: 22px;
-}
-.textleft
-{
-  height: 500px;
-  float: left;
-  width: 50%;
-}
-.imageright
-{
-  height: 450px;
-  float: right;
-  width: 50%;
-  margin-top: 50px;
-}
-
-
-
-
-
-
-.past2
-{
-  width: 100%;
-  height: 540px;
-
-}
-
-.headerright2
-{
-   margin-left: 1.5%;
-   margin-top:1.5%; 
-   padding-left: 10px;
-   padding-right: 10px;
-   border-bottom: 2px solid maroon; 
-   width: 31%;
-   float: left;
-   font-size: 20px;
-   font-weight:bold;
-   
-}
-
-.headerright
-{
-   width: 100%;
-   padding-bottom: 0;
-   margin-bottom: 0;
-}
-
-.textright
-{
-  height: 500px;
-  float: left;
-  width: 34%;
-  margin-left: 2%;
-  margin-right: 3%;
-}
-
-.imageleft
-{
-  height: 500px;
-  float: left;
-  width: 59%;
-}
-
-
-
-
-
-
-.past3
-{
-  width: 100%;
-  font-size: 18px;
-  height: 570px;
-
-}
-.headerleft4
-{
-   padding-left: 2%;
-   padding-right: 2%;
-   margin-left: 7%;
-   margin-right:23%; 
-   border-bottom: 2px solid maroon; 
-   width: 62%;
-   float: left;
-   padding-bottom: 0;
-   margin-bottom: 2%; 
-}
-
-.hh3
-{
-  padding-bottom: 0;
-   margin-bottom: 0; 
-}
-
-
-
-
-
-.montag
-{
-  height: 1200px;
-  padding:0 60px;
-  width: 1080px;
-  background: green;
-}
-
-.montagleft
-{
-  width: 50%;
-  height: 300px;
-  float: left;
-}
-
-.montagright
-{
-  width: 50%;
-  height: 300px;
-  float: right;
-}
-
-.imgmontagleft
-{
-  width: 50%;
-  height: 300px;
-  float: left;
-}
-
-.imgmontagright
-{
-  width: 50%;
-  height: 300px;
-  float: right;
-}
-
-.plus
-{
-  list-style-image: url(плюс.png);
-  font-size: 23px;
-}
-
-.minus
-{
-  list-style-image: url(минус.png);
-  font-size: 23px;
-}
-
-
-
-/*смета*/
-table
-{
-  width: 100%;
-    margin: auto;
-    margin-top: 25px;
-    border-collapse: collapse;
-}
- td, th {
-        border: 1px solid #98bf21;
-        padding: 3px 7px 2px 7px;
-      }
-th {
-        text-align: center;
-        padding: 5px;
-        background-color: #A7C942;
-        color: #fff;
-      }
-tr:nth-child(odd) { background-color: #EAF2D3; }
-.summa
- {
-  text-align: right;
- }
-
-/*end smeta*/
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="forma.css">
+        <title>main</title>
+        <script type="text/javascript" src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script type="text/javascript" src='nav.js'></script>
+        <script type="text/javascript" src='nav2.js?ver=1.0'></script>
+        <script type="text/javascript" src='slider.js?ver=1.0'></script>
+        <script type="text/javascript" src='spoiler.js?ver=1.0'></script>
+        <script type="text/javascript" src='start.js?ver=1.0'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <style type="text/css">
+
+            /*main start*/
+            h2, h3, h1
+            {
+                  margin:0;
+                  padding: 0;
+            }
+
+            @font-face{
+                font-family: 'Robots';
+                src: url('fonts/Roboto/RobotoCondensed-Light.ttf') format('truetype');
+                font-weight: 400;
+                font-style: normal;
+            }
+
+
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair_bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+            }
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair_ital.ttf') format('truetype');
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            @font-face{
+                font-family: 'Playfair';
+                src: url('fonts/Playfair_it_bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: italic;
+            }
+           
+            .menu
+            {quotes: 1px;
+                background-color: white;
+                height: 193px;
+                margin:0;
+                padding: 0 ;
+            }
+
+            .headd
+            {
+                max-width: 1200px;
+                margin: auto;
+                height: 170px;
+                padding: 0 ;
+            }
+            #logim
+            {
+                float: left;
+                width: 40%;
+                height: 120px;
+                padding: 0;
+                margin: 0;
+            }
+            #rightup
+            {
+                float: right;
+                width: 45%;
+                height: 120px;
+                padding-left: 5%;
+                text-align: left;
+                font-size: 23px;
+            } 
+            .marker
+            {
+                 list-style-image: url(111.png);
+            }
+            .marker2
+            {
+             }
+            #leftdown
+            {
+                float: left;
+                font-size: 20px;
+                width: 29%;
+                height: 38px;
+                font-size: 23px;
+                text-align: left;
+                margin-top:0;
+                padding-top: 12px; 
+                padding-left: 11%;
+                font-family: arial;
+            }
+            #butt
+            {
+                float: left;
+                width: 20%;
+                height: 40px;
+                background-color: red;
+                border-radius: 40px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+                padding: 0;
+                margin-left: 17%;
+                 font-family: arial;
+            }
+            /*main end*/
+
+
+
+             a{ text-decoration: none;
+              color: #87111C;
+            }
+
+            /*spoiler start*/
+            .spoiler_body 
+            {    
+            font-weight: normal; 
+            display: none;
+            padding-top: 10px;
+            margin-right: 8%;
+            width: 92%;
+            color: #262630;
+            }
+            .spoiler1,.spoiler2,.spoiler3,.spoiler4,.spoiler5,.spoiler6,.spoiler7,.spoiler8,.spoiler9
+            { 
+            color:#262630;
+            font-size: 22px;
+            cursor: pointer; 
+            text-decoration: none; 
+            }
+            .quests
+            {
+            padding-top: 40px;
+            padding-bottom: 60px;
+            width: 100%;
+            text-align: left;
+            background-color: #262630 ;
+            }
+            .icon1,.icon2,.icon3,.icon4,.icon5,.icon6,.icon7,.icon8,.icon9
+            {
+            width: 28px;
+            height: 28px;
+            border-radius: 14px;
+            float:right;
+            margin-right: 20px;
+            transition: 0.4s;
+            }
+            .icon1.fix11,.icon2.fix21,.icon3.fix31,.icon4.fix41,.icon5.fix51,.icon6.fix61,.icon7.fix71,.icon8.fix81,.icon9.fix91
+            {
+            background-color: #e6e6fa;
+            }
+            .icon1.fix12,.icon2.fix22,.icon3.fix32,.icon4.fix42,.icon5.fix52,.icon6.fix62,.icon7.fix72,.icon8.fix82,.icon9.fix92
+            {
+            transform: rotate(45deg);
+            transition: 0.4s;
+            }
+            .quest1,.quest2,.quest3,.quest4,.quest5,.quest6,.quest7,.quest8,.quest9
+            {
+            padding-top: 30px;
+            padding-left: 50px;
+            margin-left: 17%;
+            font-weight: bold;
+            background-color: white;
+            width: 65%;
+            padding-bottom: 25px;
+            margin-bottom: 1px;
+            cursor: pointer;
+            }
+            /*spoiler end*/
+            
+
+            /*КАЛЬКУЛЯТОР начало*/
+            .slider {
+            width:200px;
+            height:11px;
+            top:-30px;
+            background:#eee;
+            position:relative;
+            margin:0 130px;
+            padding:0 10px;
+            }
+            .slider1 {
+            width:200px;
+            height:11px;
+            top:-30px;
+            background:#eee;
+            position:relative;
+            margin:0 130px;
+            padding:0 10px;
+            }
+            .ui-slider-handle {
+            width:24px;
+            height:24px;
+            position:absolute;
+            top:-7px;
+            margin-left:-12px;
+            z-index:200;
+            background:#fc0;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            }
+            .ui-widget-header {
+            background:#f00;
+            height:8px;
+            left:1px;
+            top:1px;
+            position:absolute;
+            }
+            .textt
+            {
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            }
+            .kol
+            {
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            width: 150px;
+            padding-left: 15px;
+            height: 25px;
+            margin-top: 0;
+            margin-top: 0;
+            }
+            .gorod
+            {
+            width: 200px;
+            height: 34px;
+            }
+            .zag
+            {
+            text-align: left;
+            padding-bottom: 2%;
+            margin-top:0;
+            }
+            .zag1
+            {
+            text-align: left;
+            padding-bottom: 3%;
+            margin-top:0;
+            }
+            .zag2
+            {
+            text-align: left;
+            padding-bottom: 0;
+            margin-top:0;
+            }
+            .znch
+            {
+            position: relative;
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            width: 50px;
+            height: 25px;
+            top:-10px;
+            text-align: center;
+            }
+            .znch2
+            {
+            position: relative;
+            width: 57px;
+            height: 34px;
+            text-align: center;
+            }
+            .znch3
+            {
+            position: relative;
+            width: 150px;
+            height: 34px;
+            text-align: center;
+            }
+            .calk_sw
+            {
+            max-width: 1200px;
+            background-color: white;
+            margin: auto;
+            }
+            .caleft
+            {
+            width: 80%;
+            margin: auto;
+            height: 820px;
+            background-color: white;
+            border: 0px solid black;
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+            .kalkulimg
+            {
+            float: right;
+            width: 54%;
+            height: 463.5px;
+            margin-top: 6%;
+            padding-bottom: 12px;
+            border: 0px solid grey;
+            }
+            .block
+            {
+            width: 39%;
+            padding-top: 6%;
+            float: left;
+            }
+            .block1
+            {
+            width: 39%;
+            margin-right: 6%;
+            float: left;
+            padding-top: 3%;
+            padding-bottom: 2%;
+            border-bottom: 1px solid grey; 
+            }
+            .block2
+            {
+            width: 45%;
+            float: left;
+            height: 100px;
+            }
+            .block3
+            {
+            width: 42%;
+            float: left;
+            padding-bottom: 2%;
+            padding-top: 5%;
+            border-bottom: 1px solid grey;
+            height: 80px;
+            }
+            .block4
+            {
+            width: 43%; 
+            float: left;
+            padding-left: 3%;
+            padding-bottom: 2%;
+            padding-top: 5%;
+            margin-right: 12%;
+            border-bottom: 1px solid grey;
+            height: 80px;
+            }
+            .block5
+            {
+            width: 45%;
+            float: left;
+            padding-top: 3%;
+            }
+            .block6
+            {
+            width: 21%;
+            float: right;
+            padding-top: 3%;
+            margin-top:105.5px; 
+            padding-bottom: 0;
+            }
+            .rangeslider{
+            width: 100%;
+            }
+            .myslider {
+            -webkit-appearance: none;
+            background: #FCF3CF  ;
+            width: 50%;
+            height: 25px;
+            opacity: 2;
+            border-radius: 150px;
+            }
+            .myslider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            cursor: pointer;
+            background: maroon  ;
+            width: 14%;
+            height: 25px;
+            border-radius: 150px;
+            }  
+            .myslider:hover {
+            opacity: 1;
+            }
+            .price
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3.8%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price1
+            {
+            float: left;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 8.2%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price3
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price4
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            #endust, #dostavka, #end, #bezmon, #itogg
+            {
+            font-weight: bold;
+            font-size: 25px;
+            padding-top: 8px; 
+            font-family: arial;
+            }
+            .odna
+            {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 0;
+            }
+            .odna2
+            {
+            float: left;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            }
+            .butt2
+            {
+            float: right;
+            width: 30%;
+            height: 50px;
+            background-color: #ffbc13;
+            border-radius: 25px;
+            margin-top: 0%;
+            margin-bottom:0; 
+            text-align: center;
+            margin-right: 10%;
+            line-height: 50px;
+            cursor: pointer;
+            }
+
+
+            .toch
+            {
+                  margin-left: 10%; 
+                  margin-right: 10%; 
+            }
+
+            #o_price
+            {
+                  height: 60px;
+                  margin-top: 100px;
+            }
+
+            /*КАЛЬКУЛЯТОР конец*/
+            body {
+            margin:0;
+            background: url(фон2.jpg);
+            font-size:21px;
+            font-family: "Robots";
+            color: #262630;
+            }
+            h2
+            {
+            text-align: center;
+            padding-top: 15px;
+            font-size: 22px;
+            }  
+            input:focus { outline: none; }
+            input:active{ outline: none; }
+            .main
+            {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            }
+            .past 
+            {
+            z-index: 888;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-bottom: 5%; 
+            width: 1080px;
+            }
+            .past1
+            {
+            width: 100%;
+            height: 500px;
+            margin: 0;
+            padding: 0;
+            }
+            .svai
+            {
+            background-color: #262630;
+            color: white;
+            width: 100%;
+            padding-top: 30px;
+            height: 70px;
+            font-size: 34px;
+            text-align: center;
+            letter-spacing:1px; 
+            font-style: italic;
+            font-family: 'Playfair';
+            }
+            .svai1
+            {
+            color: #87111C;
+            letter-spacing:2px;
+            width: 100%;
+            padding-top: 3%;
+            margin:0;
+            font-size: 36px;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+            font-family: 'Playfair';
+            }
+            .headerleft
+            {
+            padding-left: 2%;
+            padding-right: 2%;
+            border-bottom: 2px solid #87111C; 
+            float: left;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing:1px; 
+            font-style: italic;
+            font-family: "Playfair";
+            }
+            .headerleft2
+            {
+            width: 97%;
+            float: left;
+            padding-top: 0;
+            margin-top: 0;
+            font-weight: bold;
+            letter-spacing:1px; 
+            font-style: italic;
+            font-family: "Playfair";
+            }
+            .headerleft3
+            {
+            padding-left: 2%;
+            padding-right: 2%;
+            border-bottom: 2px solid maroon; 
+            float: left;
+            font-size: 25px;
+            }
+            .textleft
+            {
+            height: 500px;
+            float: left;
+            width: 50%;
+            }
+            .imageright
+            {
+            font-family: arial;
+            height: 450px;
+            float: right;
+            width: 50%;
+            margin-top: 50px;
+            }
+            .past2
+            {
+            width: 1080;
+            height: 645px;
+            border-bottom: 0px solid grey;
+            padding-bottom: 2%;
+            background-color: #262630;
+            padding-left: 60px;
+            padding-right: 60px; 
+            padding-top: 0%;
+            }
+            .spez
+            {
+                font-size: 23px;
+                font-style: italic;
+                font-weight: bold;
+                letter-spacing:1px;
+                font-family: 'Playfair';
+                padding-left: 3%; 
+            }
+            .spez1
+            {
+                letter-spacing:1px;
+                font-family: 'Playfair';
+                color: #fff663;
+                font-size: 23px;
+                font-style: italic;
+                font-weight: normal;
+                padding: 0;
+                margin:0;
+            }
+            .headerright2
+            {
+            margin:0;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 3%;
+            padding-top:3%;
+            border-bottom: 0px solid #87111C; 
+            
+            text-align: center;
+            letter-spacing:1px;
+            font-style: italic;
+            font-family: "Playfair";
+            color: #fff663;
+            width: 100%;
+            font-size: 35px;
+            }
+            .headerright
+            {
+            width: 100%;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font-size: 35px;
+            }
+           .textright
+            {
+            float: left;
+            width: 38%;
+            margin-left: 2%;
+            color: white;
+            margin-bottom:0; 
+            }
+            .imageleft
+            {
+            height: 500px;
+            float: left;
+            width: 59%;
+            }
+            .past3
+            {
+            width: 100%;
+            font-size: 18px;
+            height: 490px;
+            padding-bottom: 3%;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 20px;
+            width: 1080px;
+            }
+            .headerleft4
+            {
+            padding-left: 2%;
+            padding-right: 2%;
+            margin-right:6%;
+            letter-spacing:1px; 
+            font-style: italic;
+            width: 90%;
+            float: left;
+            padding-bottom: 0;
+            margin-bottom: 2%; 
+            padding-top: 0%;
+            margin-top: 0;
+            font-size: 30px;
+            font-weight: 600;
+            color:#87111C;
+            font-family: "Playfair";
+            }
+            .hh3
+            {
+            padding-bottom: 0;
+            margin-bottom: 0; 
+            }
+            .montag
+            {
+            height: 1500px;
+            width: 69%; 
+            margin-left: 17%;
+            }
+            .montag table
+            {
+            width: 100%;
+            margin: auto;
+            margin-top: 25px;
+            border-collapse: collapse;
+            text-align: left;
+            background:  rgb(255, 246, 99, 0.5);
+            }
+            .montag td, .montag th {
+            border: 1px solid #262630;
+            padding: 3px 7px 2px 7px;
+            width: 50%;
+
+            }
+            .montag th {
+            text-align: center;
+            padding: 5px;
+            background-color: #262630;
+            color: #fff663;
+            font-family: "Playfair";
+            font-weight: normal;
+            letter-spacing: 1px;
+            }
+            
+
+            .montag2
+            {
+            width: 30%;
+            float: left;
+            padding-top: 35px;
+            font-size: 20px;
+            padding-left: 3%;
+            }
+            .montag3
+            {
+            width: 44%;
+            float: left;
+            padding-top: 35px;
+            font-size: 20px;
+            padding-left: 3%;
+            }
+            .ryka
+            {
+            border: 1px solid #262630;
+            color: black;
+            }
+            .plus
+            {
+            list-style-image: url(плюс.png);
+            width: 90%;
+            }
+            .minus
+            {
+            list-style-image: url(минус.png);
+            width: 90%;
+            }
+            .maroon
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-size: 23px;
+            padding-left: 2%;
+            margin-left: 1%;
+            width: 44%;
+            }
+            .maroon2
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            padding-left: 2%;
+            width: 98%;
+            }
+            .maroon3
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-size: 23px;
+            padding-left: 2%;
+            width: 90%;
+            }
+            .maroon4
+            {
+            font-weight:normal;
+            font-style:italic; 
+            width: 100%;
+            margin:auto;
+            padding-top: 10px;
+            padding-bottom:  3%;
+            letter-spacing: 3px;
+            font-size: 35px;
+            text-align: center;
+            color: #fff663;
+            font-family: 'Playfair';
+            }
+            .headermontagleft
+            {
+            background-color: #262630;
+            width: 100%;
+
+            font-style: italic;
+            height: 100px;
+            line-height: 100px;
+            font-size: 36px;
+            text-align: center;
+            letter-spacing: 2px;
+            color:#fff663;
+            font-family: "Playfair";
+            }
+            .imgmontagright
+            {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 60%;
+            height: 370px;
+            float: right;
+            }
+            .imgmontagleft2
+            {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            width: 50%;
+            height: 350px;
+            float: left;
+            }
+            .imgmontagright2
+            {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            margin-left: 3%;
+            width: 50%;
+            height: 330px;
+            float: right;
+            }
+
+            /*смета*/
+            .smeta table
+            {
+            width: 100%;
+            margin: auto;
+            margin-top: 25px;
+            border-collapse: collapse;
+            text-align: center;
+            }
+            .smeta td, th {
+            border: 1px solid #d9d9d9;
+            padding: 3px 7px 2px 7px;
+            width: 20%;
+            }
+            .smeta th {
+            text-align: center;
+            padding: 5px;
+            background-color: #ffbc13;
+            color: #fff;
+            }
+            .smeta tr:nth-child(odd) { background-color: #f7eac89f; }
+            .summa
+            {
+            text-align: right;
+            }
+            /*end smeta*/
+            /*kntakt*/
+            .kontakt
+            {clear: both;
+            width: 100%;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            }
+            .headerkont
+            {
+                text-align: left;
+                letter-spacing: 2px;
+                font-size: 30px;
+                padding-left: 10%;
+                padding-bottom: 3%;
+                letter-spacing:1px; 
+            font-style: italic;
+                font-family: "Playfair";
+            }
+            .kont1, .kont2,.kont3,.kont4
+            {
+            float: left;
+            width: 21.5%;
+            border: 0px solid grey;
+            height: 100px;
+            margin-left: 2%;
+            text-align: left;
+            padding-right: 1%
+            }
+
+            .kont2
+            {
+              padding-top: 20px;
+              height: 80px;
+            }
+            /*kontakt end*/
+            /*nav*/
+            .nurdsami_pgernlab a{
+            text-decoration:none;
+            }
+            .nurdsami_pgernlab{
+            height:70px;
+            background:#87111C;
+            color:#262630;
+            position:sticky;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            clear: both;
+            }
+            .nurdsami_pgernlab>ul{
+            position:relative;
+            list-style:none;
+            padding:0;
+            margin:0;
+            }
+            .nurdsami_pgernlab>ul>li>ul{
+            position:absolute;
+            left:0;
+            padding:0;
+            margin:0;
+            list-style:none;
+            }
+            .nurdsami_pgernlab>ul>li:hover>ul li a{
+            opacity:1;
+            height:50px;
+            transition:all .3s linear;
+            -o-transition:all .3s linear;
+            -moz-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            }
+            .nurdsami_pgernlab>ul>li>ul a {
+            display: block;
+            color: white;
+            width: 170px;
+            line-height: 50px !important;
+            font: 700 14px;
+            background: #565151;
+            border-bottom: 1px solid #8a8686;
+            text-align: left;
+            padding-left: 10px;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .3s linear .2s;
+            -o-transition: all .3s linear .2s;
+            -moz-transition: all .3s linear .2s;
+            -webkit-transition: all .3s linear .2s;
+            }
+            .nurdsami_pgernlab>ul>li{
+            float:right;
+            position:relative;
+            }
+            .nurdsami_pgernlab>ul>li>a{
+            padding:0 40px;
+            color:white;
+            font-family: 'Playfair';
+            letter-spacing:2px;
+            font-style: italic;
+            display:block;
+            line-height:70px !important;
+            font:400 15px;
+            text-transform:uppercase;
+            text-decoration:none;
+            }
+            .lamp span{
+            display:block;
+            height:4px;
+            background:#fff663;
+            position: relative;
+            }
+            .lamp span:after {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(238, 102, 102, 0);
+            border-bottom-color: #fff663;
+            border-width: 4px;
+            margin-left: -4px;
+            }
+            .lamp{
+            position:absolute !important;
+            height:4px;
+            top:66px;
+            background:#333;
+            transition:all .3s linear;
+            -o-transition:all .3s linear;
+            -moz-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            }
+            #ots
+            {
+            height: 10px;
+            float:right;
+            width: 10px;
+            }
+            /* Position the image container (needed to position the left and right arrows) */
+            .container {
+            position: relative;
+            max-width: 1200px;
+            margin:auto;
+            }
+            /* Hide the images by default */
+            .mySlides {
+            display: none;
+            }
+            /* Add a pointer when hovering over the thumbnail images */
+            .cursor {
+            cursor: pointer;
+            }
+            /* Next & previous buttons */
+            .prev,
+            .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            }
+            /* Position the "next button" to the right */
+            .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            }
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+            /* Container for image text */
+            .caption-container {
+            text-align: center;
+            background-color: #262630;
+            padding: 2px 16px;
+            color: #fff663;
+            }
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+            /* Six columns side by side */
+            .column {
+            float: left;
+            width: 16.66%;
+            }
+            /* Add a transparency effect for thumnbail images */
+            .demo {
+            opacity: 0.8;
+            }
+            .active,
+            .demo:hover {
+            opacity: 1;
+            }
+            .q{
+            vertical-align: middle;
+            }
+            /*nav end*/
+        </style>
+    </head>
+    <body>
+<div class="menu">
+            <div class="headd">
+                <div id="logim"><img src="123.png" width="100%" height="100%"></div>
+                <div id="rightup">
+                    <ul class="marker">
+                        <li class="marker2">Собственное производство!</li>
+                        <li class="marker2">Быстрая и бесплатная доставка!</li>
+                        <li class="marker2">Гарантия 12 месяцев!</li>
+                    </ul>
+                </div>
+                <p id="leftdown">+7 383 328-15-91</p>
+                <div id="butt">Заказать звонок</div>
+            </div>
+        </div>
+        <div class='nurdsami_pgernlab'>
+            <div id="ots"></div>
+            <ul>
+                <li><a href='#'>Главная</a></li>
+                <li>
+                    <a href='svai.html'>Винтовые сваи</a>
+                    <ul>
+                        <li><a href='#o_svai'>О сваях</a></li>
+                        <li><a href='#o_montag'>Монтаж</a></li>
+                        <li><a href='#o_price'>Расчёт стоимости</a></li>
+                        <li><a href='#o_otvetah'>Ответы на вопросы</a></li>
+                        <li><a href='#o_zakaz'>Заказать сваи</a></li>
+                        <li><a href='#o_kont'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='naves.html'>Навесы</a>
+                    <ul>
+                        <li><a href='naves.html#naves'>О навесах</a></li>
+                        <!--<li><a href='naves.html#'>Установка навесов</a></li>-->
+                        <li><a href='naves.html#calc'>Расчёт стоимости</a></li>
+                        <li><a href='naves.html#zakaz'>Ответы на вопросы</a></li>
+                        <li><a href='naves.html#otvet'>Заказать навес</a></li>
+                        
+                        <li><a href='naves.html#o_kont'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='besedki.html'>Беседки</a>
+                    <ul>
+                        
+                        <li><a href='besedki.html#katalog'>Каталог</a></li>
+                        <li><a href='besedki.html#besedka'>О беседках</a></li>
+                        <li><a href='besedki.html#vopros'>Ответы на вопросы</a></li> 
+                        <li><a href='besedki.html#zakaz'>Заказать беседку</a></li>
+                        <li><a href='besedki.html#o_kont'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href='komplex.html'>Комплексы</a>
+                    <ul>
+                        <li><a href='komplex.html#katalog'>Каталог</a></li>
+                        <li><a href='komplex.html#kopmlex'>О комплексах</a></li>
+                        <li><a href='komplex.html#vopros'>Ответы на вопросы</a></li> 
+                        <li><a href='komplex.html#zakaz'>Заказать беседку</a></li>
+                        <li><a href='komplex.html#o_kont'>Контакты</a></li>
+                    </ul>
+                </li>
+                <li class='lamp'><span></span></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img class="q" src="галерея1.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img class="q" src="галерея2.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img class="q" src="галерея3.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img class="q" src="галерея4.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img class="q" src="галерея6.jpg" style="width:100%;height: 700px;">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img class="q" src="галерея.jpg" style="width:100%;height: 700px;">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img class="q demo cursor" src="галерея1.jpg" style="width:100%; height: 150px" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="галерея2.jpg" style="width:100%; height: 150px" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="галерея3.jpg" style="width:100%; height: 150px" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="галерея4.jpg" style="width:100%; height: 150px" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="q demo cursor" src="галерея6.jpg" style="width:100%; height: 150px" onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div  id="o_svai" class="column">
+                    <img class="q demo cursor" src="галерея.jpg" style="width:100%; height: 150px" onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="svai1">ВИНТОВЫЕ СВАИ </div>
+            <div class="past">
+                <div class="past1">
+                    <div class="textleft">
+                        <ul>
+                            <div class="headerleft2">
+                                <p class="headerleft">Винтовые сваи </p>
+                            </div>
+                            <p > Это стальные трубы с лопастями. Сваи заглубляются в грунт путем ввинчивания.</p>
+                            <div class="headerleft2">
+                                <p class="headerleft3">Основные компоненты винтовых свай: </p>
+                            </div>
+                            <li>Ствол - подразделяется на направляющую (ведущую) часть с заостренным концом и удлинитель: направляющая часть с лопастью/лопастями первой входит в грунт, а удлинитель используется для ее дальнейшего погружения в грунт до несущего слоя. Удлинители могут иметь дополнительные несущие лопасти, но чаще состоят из ствола и муфт.</li>
+                            <li>Bинтовые несущие лопасти. </li>
+                            <!-- <p> Винтовые сваи ипользуют в строительстве в труднодоступных районах со сложным грунтом.</p>
+                                <p>У нас собственное производство винтовых свай</p>-->
+                        </ul>
+                    </div>
+                    <div class="imageright"><img src="схема2.jpg" width="100%" height="80%"></div>
+                </div>
+            </div>
+                <div class="past2">
+
+                        <p class="headerright2">Разновидности винтовых свай</p>
+                    <div class="imageleft"><img src="свая схема.jpg" width="100%" height="100%"></div>
+                    
+                    <div class="textright">
+                        <p>1) Однолопастные и двулопастные. </p>
+                        <p>2) Для вашего фундамента мы подберем индивидуальный размер сваи:</p>
+                        <ul>
+                            <li>по диаметру трубы от 76 до 139 мм.</li>
+                            <br>
+                            <li> c толщиной стенки от 3 до 4 мм. </li>
+                            <br>
+                            <li> по длине сваи от 2 до 3,5 метров.</li>
+                            <br>       
+                            <li> Выбор осуществляется на основании анализа особенностей грунта на данном участке и предполагаемой нагрузки на фундамент.</li>
+                        </ul>
+                        <h3 class="spez1" > Все необходимые расчеты может сделать наш специалист!</h3>
+                    </div>
+                </div>
+                <div class="past3">
+                    <div class="textleft">
+                        <div class="headerleft4">
+                            <p class="hh3">Преимущества винтовых свай:</p>
+                        </div>
+                        <ul>
+                            <li> Важной характеристикой винтовой сваи является толщина металла, из которого изготовлены стенки ее ствола.</li>
+                            <br> 
+                            <li>Расчет необходимой толщины делается на основании предполагаемой нагрузки на сваю и условий ее эксплуатации.</li>
+                            <br> 
+                            <li>Монтаж можно делать и в зимнее время, то есть круглый год, ведь погода и прочие внешние факторы(рельеф, проблемный грунт и др.) существенно не влияют на процесс монтажа винтовых свай. </li>
+                            <br>
+                            <li>Высокая скорость монтажа – это достоинство винтовых свай, ведь в строительном бизнесе время ценят как ничто другое.</li>
+                            <br> 
+                            <li>Винтовая свая готова к эксплуатации сразу же после установки.</li>
+                            <br> 
+                            <li> Низкий уровень шума и вибраций при монтаже, в сравнении с забивными.</li>
+                        </ul>
+                        <h3 class="spez" id="o_montag" >Гарантия 12 месяцев!</h3>
+                    </div>
+                    <div class="imageright"><img src="свая схема.jpg" width="100%" height="100%"></div>
+                </div>
+
+            <div class="headermontagleft">
+                <p class="hh3">Способы монтажа</p>
+            </div>
+            <div class="montag">
+                <p class="montag2">При монтаже конструкций может применяться специальное устройство для завинчивания винтовых свай. <br> <br>
+                    Эту операцию можно выполнить и вручную, если конструкция небольших размеров.
+                </p>
+                <div class="imgmontagright"> <img src="ручной1.jpg" width="100%" height="100%"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="ryka" colspan="2">1) Ручной способ</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <ul class="plus">
+                                <li>Установка свай вручную осуществляется в том случае, когда механизированный способ закручивания применить невозможно.</li>
+                                <br>
+                                <li>Cпособ применяют при возведении фундаментов для небольших построек, расположенных на участках за городом. Например <a>беседки</a>, хозяйственные постройки или бани. </li>
+                                <br> 
+                                <li>Надежность и точная установка.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="minus">
+                                <p class="maroon2">Такой способ нельзя применять:</p>
+                                <li>Если диаметр сваи превышает 133мм.</li>
+                                <br> 
+                                <li>Если в грунте присутствует много камней и другого строительного мусора.</li>
+                                <br> 
+                                <li> Если грунт очень плотный</li>
+                                <br> 
+                                <li> Если свободное пространство рядом с фундаментом радиусом менее 3 метров</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p class="montag3">Мы производим работы по установке винтовых свай с помощью специальной бурильной техники.<br> <br>
+                    Машины обладают прекрасной мобильностью и позволяют произвести работы по установке винтовых свай с высокой точностью, скоростью и качеством. 
+                </p>
+                <div class="imgmontagright2"> <img src="механ.jpg" width="100%" height="100%"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="ryka" colspan="2">2) Механический способ</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <ul class="plus">
+                                <li>Использование специального оборудования упростит процесс.</li>
+                                <li>Cкорость установки будет выше, чем при использовании ручных приспособлений.</li>
+                                <li>Диаметр может превышать 133мм.</li>
+                                <li>Можно использовать при достаточно плотном грунте, а также, если в грунте присутствуют камни и строительный мусор.</li>
+                                <li>При большом объеме работ – лучше воспользоваться установкой с использованием механического способа, а не ручным монтажом. </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul  class="minus">
+                                <li>Нужно убедиться, что необходимая техника сможет без проблем добраться до места установки фундамента.</li>
+                                <li> Если планируется установить небольшое количество винтовых свай - этот способ будет достаточно дорогим.</li>
+                                <li>Установка свай не такая точная, если сравнивать с ручным монтажом.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+        <div id="o_price"></div>
+        <div  class="kalkul">
+            <div class="svai">КАЛЬКУЛЯТОР ВИНТОВЫХ СВАЙ </div>
+            <div class="calk_sw">
+                <div class="caleft">
+                    <div class="kalkulimg"> <img id="kalkyl" src="1лсог.jpg" width="100%" height="100%"> </div>
+                    <div class="block">
+                        <div class="rangeslider">
+                            <p class="zag">Длина (в метрах)</p>
+                            <input class="znch " type="number" id="demo1" min="2" max="3.5" value="2" step="0.5">
+                            <input type="range" min="2" max="3.5" value="2" step="0.5" 
+                                class="myslider textt" id="sliderRange1">
+                        </div>
+                    </div>
+                    <div class="block1">
+                        <div class="rangeslider">
+                            <p class="zag">Толщина стенок (в мм)</p>
+                            <input class="znch " type="number" id="demo2" min="3" max="4.5" value="3" step="0.5">
+                            <input type="range" min="3" max="4.5" value="3" step="0.5" 
+                                class="myslider textt" id="sliderRange2">
+                        </div>
+                    </div>
+                    <div class="block2">
+                        <div class="block3">
+                            <p class="zag1">Диаметр (в мм)</p>
+                            <select id="s1" class="textt znch2" name="select2">
+                                <option selected value="76">76</option>
+                                <option value="89">89</option>
+                                <option value="108">108</option>
+                                <option value="139">139</option>
+                            </select>
+                        </div>
+                        <div class="block4">
+                            <p class="zag2">Наличие оголовка</p>
+                            <input id="s3" type="checkbox" name="q3" checked value="1">
+                        </div>
+                        <div class="block3">
+                            <p class="zag2">Количество лопостей</p>
+                            <select id="s2" class="textt znch2" name="select3">
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="block4">
+                            <p class="zag2">Количество свай</p>
+                            <input required id="kol" class="kol" name="kol" value="1" type="number" min="1" placeholder="Введите количество" />
+                        </div>
+                        <div class="block5">
+                            <p class="zag2">Регион доставки</p>
+                            <select id="region" class="textt gorod" name="select">
+                                <option selected value="1">Новосибирск</option>
+                                <option value="2">Новосибирская обл.</option>
+                                <option value="3">Другой город</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="block6">
+                        <p class="zag2">Монтаж</p>
+                        <select id="mon" class="textt znch3" name="select2">
+                            <option selected value="1">С монтажем</option>
+                            <option value="2">Без монтажа</option>
+                        </select>
+                    </div>
+                    <div class="price1">
+                        <p class="odna">Стоимость одной сваи</p>
+                        <p class="odna">Стоимость доставки</p>
+                        <p class="odna" id="end">1255 рублей</p>
+                        <p class="odna" id="dostavka">1500 рублей</p>
+                    </div>
+                    <div class="butt2">Заказать сваи</div>
+                    <div class="price3">
+                        <p class="odna">Итоговая стоимость</p>
+                        <p id="itogg">3655 рублей</p>
+                    </div>
+                </div>
+                <p id="o_otvetah" class="toch">Расчеты могут иметь некоторую погрешность. Данный расчет не является офертой, и точную стоимость может определить специалист, исходя из Ваших пожеланий, и места установки конструкции.</p>
+            </div>
+        </div>
+        <div  class="quests">
+            <div class="maroon4">Ответы на популярные вопросы </div>
+            <div class="quest1">
+                <div class="icon1">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler1">Можно ли заказать сваи без монтажа?</a>
+                <div class="spoiler_body">
+                    <p>Да, вы можете купить и без монтажа. Стоимость материалов, вы можете посчитать на <a href="">нашем калькуляторе</a>. </p>
+                </div>
+            </div>
+            <div class="quest5">
+                <div class="icon5">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler5">Какие способы оплаты у вас есть?</a>
+                <div class="spoiler_body">
+                    У нас есть оплата наличными и безналичными, как вам удобно. 
+                    Мы работаем по предоплате в 70% с заключением договора. <br>
+                    Если количество свай менее 5, то возможна оплата при получении.
+                </div>
+            </div>
+            <div class="quest2">
+                <div class="icon2">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler2">Почему винтовые сваи лучше, чем другой фундамент?</a>
+                <div class="spoiler_body">
+                    Винтовая свая готова к эксплуатации сразу же после установки.<br>
+                    Низкая стоимость фундамента на винтовых сваях в сравнении со стоимостью других видов фундамента.<br>
+                    Более подробно вы можете прочитать в <a href="">преимуществах винтовых свай</a>
+                </div>
+            </div>
+            <div class="quest3">
+                <div class="icon3">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler3">На каких грунтах можно ипсользовать винтовые сваи?</a>
+                <div class="spoiler_body">
+                    Свайно – винтовой фундамент достаточно удобен при возведении построек на любой местности, в том числе и на воде, замерзших почвах. <br>
+                    Такой фундамент можно возвести на любом проблемном грунте(почва, просадочные глинистые грунты и др.) или на рельефах с неровностями.
+                </div>
+            </div>
+            <div class="quest6">
+                <div class="icon6">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler6">Какой срок службы фундамента на винтовых сваях?</a>
+                <div class="spoiler_body">
+                    Срок службы может достигать до 100 лет, но может быть уменьшен из-за агрессивной среды грунта.
+                </div>
+            </div>
+            <div class="quest7">
+                <div class="icon7">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler7">В чём отличие однолопастных и двулопастных свай?</a>
+                <div class="spoiler_body">
+                    По количеству лопастей у нас есть два вида винтовых свай: одно- и двулопастные. <br>
+                    Первые предназначены исключительно для плотных грунтов с малой подвижностью.Вторые более универсальны, хотя главное их назначение – слабые грунты с малой несущей способностью, сваи устойчивее к различным видам нагрузок.
+                </div>
+            </div>
+            <div class="quest8">
+                <div class="icon8">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler8">Используете ли вы что-то для защиты от коррозии?</a>
+                <div class="spoiler_body">
+                    Коррозия-это самопроизвольное разрушение металла, под воздействием агрессивной среды.<br>
+                    Для снижения влияния коррозионных процессов на сваи мы увеличиваем толщину ее стенок и наносим дополнительное защитное покрытие,чтобы фундамент на винтовых сваях служил долго.
+                </div>
+            </div>
+            <div  id="o_zakaz" class="quest9">
+                <div class="icon9">
+                    <svg width="28" height="28">
+                        <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
+                        <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
+                    </svg>
+                </div>
+                <a href="" class="spoiler9"> Влияет ли климат на винтовые сваи?</a>
+                <div class="spoiler_body">
+                    Монтаж возможен в любых условиях в любое время года. Его можно делать в зимнее и в летнее время года,потому что погода и прочие внешние факторы существенно не влияют на процесс монтажа винтовых свай. <br>
+                    Таким образом, если вы зимой надумали начать постройку загородного дома или коттеджа, то необходимо выбирать винтовые сваи для фундамета.
+                </div>
+            </div>
+        </div>
+        <div class="ramka">
+<h2 id="zakaz" class="headerform">Оставить заявку</h2>
+        <div class="forma">
+            <form class="contact_form" action="#" method="post" name="contact_form">
+                <ul>
+                    <li>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text"  placeholder="Введите имя" required />
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" placeholder="Введите почту" required />
+                        <span class="form_hint">В формате "name@mmm.com"</span>
+                    </li>
+                    <li>
+                        <label for="message">Текст заявки:</label>
+                        <textarea name="message" cols="40" rows="6" required ></textarea>
+                    </li>
+                    <li>
+                        <button class="submit" type="submit">Отправить заявку</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+</div>
+       <footer id="o_kont" style="height: 200px; background-color: #262630;color:#ffbc13; padding-top: 3%;padding-bottom: 3%; ">
+    <div class="headerkont">Контакты</div>
+            <div class="kont1">
+                <p>г.Новосибирск</p>
+                <p>ул.Ельцовская 37</p>
+            </div>
+            <div class="kont2">
+                <a href="tel:+79232220866"> +7 (923) 222-08-66 </a><br>
+                <a href="tel:+73832865201"> +7 (383) 286-52-01 </a><br>
+                <a href="tel:+79137895415"> +7 (913) 789-54-15 </a>
+            </div>
+            <div class="kont3">
+                <p>E-mail:</p>
+                <a href="mailto:Amigo2017.nsk@mail.ru">Amigo2017.nsk@mail.ru </a>
+            </div>
+            <div class="kont4">
+                <p>Без обеда и выходных</p>
+                <p>9:00-20:00</p>
+            </div>
+</footer>
+</div>
+        <script>
+            var rangeslider = document.getElementById("sliderRange1");
+            var output = document.getElementById("demo1");
+            var rangeslider2 = document.getElementById("sliderRange2");
+            var output2 = document.getElementById("demo2");
+            var sum=1255;
+            var itogov=0;
+            var bezmontag=0;
+            var itogg = document.getElementById("itogg");
+            var diam = document.getElementById("s1");
+            var lopost = document.getElementById("s2");
+            var ogol = document.getElementById("s3");
+            var end = document.getElementById("end");
+            var mon= document.getElementById("mon");
+            var kol = document.getElementById("kol");
+            var dostavka = document.getElementById("dostavka");
+            var region=document.getElementById("region");
+            var lopos=document.getElementById("lopos");
+            var ogolovki=document.getElementById("ogol");
+            var kolsvai=document.getElementById("kolsvai");
+            var loposit=document.getElementById("loposit");
+            var ogolit=document.getElementById("ogolit");
+            var svaiit=document.getElementById("svaiit");
+            var odnasvai=document.getElementById("kolmontag");
+            var kolmontag=document.getElementById("kolmontag");
+            var kalkyl=document.getElementById("kalkyl");
+            function checkdost(){
+              if(region.value==1)
+              {
+                if (kol.value>=15)
+                {
+                  dostavka.innerHTML="Бесплатно";
+                }
+                else
+                {
+                  dostavka.innerHTML="1500 рублей";
+                }
+              }
+              if (region.value==2)
+                {
+                  dostavka.innerHTML="1500 рублей";
+                }
+              if (region.value==3)
+                {
+                  dostavka.innerHTML="Более 1500 рублей";
+                }
+            }
+            
+            function itogo (){
+              itogov=sum*kol.value;
+              if(mon.value==1) itogov=itogov+kol.value*900;
+              if(region.value==1)
+              {
+                if (kol.value<15)
+                {
+                  itogov=itogov+1500;
+                }
+              }
+              if (region.value==2)
+                {
+                  itogov=itogov+1500;
+                }
+              if (region.value==3)
+                {
+                  itogov=itogov+1500;
+                  
+                }
+              if(sum==0) {itogg.innerHTML="невозможно";}
+              else
+              {
+                itogg.innerHTML=itogov+"   рублей";
+              }
+            }
+            
+            function calc(){
+              sum=0;
+              
+              if(diam.value==76)
+              {
+            
+                if(output2.value==3) sum=290;
+                if(output2.value==3.5) sum=376;
+                if(output2.value==4) sum=411;
+              }
+              if(diam.value==89)
+              {
+                if(output2.value==3) sum=379;
+                if(output2.value==3.5) sum=418;
+                if(output2.value==4) sum=462;
+            
+              }
+              if(diam.value==108)
+              {
+                if(output2.value==3) sum=0;
+                if(output2.value==3.5) sum=487;
+                if(output2.value==4) sum=543;
+              }
+              if(diam.value==139)
+              {
+                if(output2.value==3) sum=0;
+                if(output2.value==3.5) sum=582;
+                if(output2.value==4) sum=646;
+              }
+              sum=sum*output.value;
+              if(sum==0) {end.innerHTML="невозможно";}
+              else
+              {
+                if(lopost.value==1) sum=sum+275;
+                else sum=sum+550;
+                if(ogol.checked) sum=sum+400;
+              end.innerHTML=sum+"   рублей";
+              }
+            }
+            mon.oninput = function()
+            {
+              itogo();
+            }
+            
+            
+            region.oninput = function()
+            {
+              checkdost();
+              itogo();
+            }
+            
+            kol.oninput = function()
+            {
+            
+            checkdost();
+              itogo();
+              
+            }
+            
+            rangeslider.oninput = function() {
+              output.value = this.value;
+              calc();
+              itogo();
+            }
+            output.oninput = function() {
+            if(output.value > 4.5) output.value = 4.5;
+            
+            rangeslider.value = this.value;
+            calc();
+              itogo();
+            }
+            rangeslider2.oninput = function() {
+              output2.value = this.value;
+              calc();
+                itogo();
+            }
+            output2.oninput = function() {
+            if(output2.value > 4.5) output2.value = 4.5;
+            
+            rangeslider2.value = this.value;
+            calc();
+              itogo();
+            }
+            s1.oninput = function() {
+              calc();
+                itogo();
+            }
+            lopost.oninput = function() {
+              
+              calc();
+                itogo();
+            
+               
+                if(lopost.value==1)
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="1лсог.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="1 ЛОП.jpg";
+                  }
+                }
+                else
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="2 лоп И ОГОЛ.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="2 лоп.jpg";
+                  }
+                }
+            }
+            ogol.oninput = function() {
+              calc();
+                itogo();
+              
+              if(lopost.value==1)
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="1лсог.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="1 ЛОП.jpg";
+                  }
+                }
+                else
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="2 лоп И ОГОЛ.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="2 лоп.jpg";
+                  }
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            $(function(){
+            if($('.nurdsami_pgernlab>ul>li').hasClass('selected')){
+            $('.selected').addClass('active');
+            var currentleft=$('.selected').position().left+"px";
+            var currentwidth=$('.selected').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            else{
+            $('.nurdsami_pgernlab>ul>li').first().addClass('active');
+            var currentleft=$('.active').position().left+"px";
+            var currentwidth=$('.active').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            $('.nurdsami_pgernlab>ul>li').hover(function(){
+            $('.nurdsami_pgernlab ul li').removeClass('active');
+            $(this).addClass('active');
+            var currentleft=$('.active').position().left+"px";
+            var currentwidth=$('.active').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            },function(){
+            if($('.nurdsami_pgernlab>ul>li').hasClass('selected')){
+            $('.selected').addClass('active');
+            var currentleft=$('.selected').position().left+"px";
+            var currentwidth=$('.selected').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            else{
+            $('.nurdsami_pgernlab>ul>li').first().addClass('active');
+            var currentleft=$('.active').position().left+"px";
+            var currentwidth=$('.active').css('width');
+            $('.lamp').css({"left":currentleft,"width":currentwidth});
+            }
+            });
+            });
+            let windowWidth=$(window).innerWidth();
+              windowWidth=(windowWidth-1200)/2;
+              
+              $('#ots').width(windowWidth)
+              //$('.topnav').css("padding-right", windowWidth + "px");
+            
+        </script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+    </body>
+</html>
