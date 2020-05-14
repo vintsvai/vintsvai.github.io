@@ -13,9 +13,11 @@
         <script type="text/javascript" src='start.js?ver=1.0'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesl.css" />
+        <script src="modernizr.custom.63321.js"></script>
         <style type="text/css">
 
-            @font-face{
+           @font-face{
                 font-family: 'Robots';
                 src: url('fonts/Roboto/RobotoCondensed-Light.ttf') format('truetype');
                 font-weight: 400;
@@ -51,14 +53,6 @@
                 font-style: italic;
             }
 
-
-
-            input:focus { outline: none; }
-            input:active{ outline: none; }
-            select:focus { outline: none; }
-            select:active{ outline: none; }
-
-
             body {
             margin:0;
             background: url(фон2.jpg);
@@ -66,26 +60,10 @@
             font-family: "Robots";
             color: #262630;
             }
-            .btn {
-            border: none;
-            outline: none;
-            padding: 3px;
-            background-color: #f1f1f1;
-            cursor: pointer;
-            font-size: 18px;
-            height: 65px;
-            width: 120px;
-            }
-            .active1 {
-            background-color: #ffbc13;
-            color: white;
-            }
-
-
-            a{ text-decoration: none;
+             a{ text-decoration: none;
               color: #87111C;
             }
-
+            
             /*nav*/
             .nurdsami_pgernlab a{
             text-decoration:none;
@@ -269,11 +247,9 @@
             }
             /*nav end*/
 
-
             /*main start*/
             .menu
-            {quotes: 1px;
-                background-color: white;
+            {   background-color: white;
                 height: 193px;
                 margin:0;
                 padding: 0 ;
@@ -341,7 +317,11 @@
 
 
 
-
+            
+            input:focus { outline: none; }
+            input:active{ outline: none; }
+            select:focus { outline: none; }
+            select:active{ outline: none; }
 
            /*смета*/
 
@@ -387,9 +367,6 @@
              {
               text-align: left;
              }
-
-
-
              #stoim1,#stoim2,#stoim3
              {
               text-align: right;
@@ -566,7 +543,6 @@
             height: 463.5px;
             margin-top: 6%;
             padding-bottom: 0px;
-            border: 0px solid grey;
             }
             .block
             {
@@ -598,6 +574,20 @@
               height: 280px;
               width: 40%;
               padding-top:400px;
+            }
+            .btn {
+            border: none;
+            outline: none;
+            padding: 3px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+            height: 65px;
+            width: 120px;
+            }
+            .active1 {
+            background-color: #ffbc13;
+            color: white;
             }
             .block2
             {
@@ -769,7 +759,6 @@
             }
 
             /*КАЛЬКУЛЯТОР конец*/
-
             /*spoiler start*/
             .spoiler_body 
             {    
@@ -828,12 +817,48 @@
             /*spoiler end*/
             
 
+         /*kntakt*/
+            .kontakt
+            {clear: both;
+            width: 100%;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            }
+            .headerkont
+            {
+                text-align: left;
+                letter-spacing: 2px;
+                font-size: 30px;
+                padding-left: 10%;
+                padding-bottom: 3%;
+                font-family: "Playfair";
+            }
+            .kont1, .kont2,.kont3,.kont4
+            {
+            float: left;
+            width: 21.5%;
+            border: 0px solid grey;
+            height: 100px;
+            margin-left: 2%;
+            text-align: left;
+            padding-right: 1%
+            }
+
+            .kont2
+            {
+              padding-top: 20px;
+              height: 80px;
+            }
+            /*kontakt end*/
+
             /*telo*/
             .main
             {
             max-width: 1200px;
             margin: auto;
             background: white;
+            padding:0;
             clear: both;
             }
             .past 
@@ -843,26 +868,68 @@
             padding-right: 60px;
             margin-bottom: 5%; 
             width: 1080px;
+            border: 0px solid red;
             }
             .past1
             {
             width: 100%;
-            height: 500px;
+            height: 450px;
             margin: 0;
             padding: 0;
             }
+
+            .garant
+            {
+               font-weight: bold;
+                font-style: italic;
+                letter-spacing:2px;
+                font-family: 'Playfair';
+                font-size: 25px;
+                padding-left: 3%;
+            }
+
+            .garant1
+            {
+               
+                letter-spacing:1px;
+                font-family: 'Playfair';
+                color: #fff663;
+                font-size: 23px;
+                font-style: italic;
+                padding: 0;
+                margin:0;
+            }
+
             .svai
             {
-            background-color: #262630;
-            color: white;
-            letter-spacing:1px;
+                background: #262630;
+            color: #fff663;
+            letter-spacing:2px;
             width: 100%;
             padding-top: 30px;
             height: 70px;
             font-size: 34px;
             text-align: center;
+            font-style: italic;
+            font-weight: normal;
             font-family: 'Playfair';
             }
+            .svai1
+            {
+                background: #262630;
+            color: white;
+            letter-spacing:2px;
+            width: 100%;
+            line-height: 90px;
+            height: 90px;
+            font-size: 36px;
+            text-align: center;
+            font-style: italic;
+            font-weight: normal;
+            font-family: 'Playfair';
+            }
+
+
             .headerleft
             {
             padding-left: 2%;
@@ -882,23 +949,6 @@
             font-weight: bold;
             font-family: "Playfair";
             }
-            .headerleft7
-            {
-            width: 97%;
-            float: left;
-            padding-top: 0;
-            margin-top: 0;
-            }
-            .headerleft3
-            {
-            padding-left: 2%;
-            padding-right: 2%;
-            border-bottom: 2px solid #87111C; 
-            float: left;
-            font-size: 25px;
-            font-weight: bold;
-            font-family: "Playfair";
-            }
             .textleft
             {
             height: 500px;
@@ -913,17 +963,50 @@
                 width: 50%;
                 margin-top: 50px;
             }
+            .maroon1
+            {
+            font-weight:normal;
+            font-style:italic; 
+            width: 100%;
+            margin:auto;
+            padding-top: 10px;
+            padding-bottom:  3%;
+            letter-spacing: 3px;
+            font-size: 35px;
+            text-align: center;
+            color: #fff663;
+            font-family: 'Playfair';
+            }
+            .textleft1
+            {
+            float: left;
+            width: 47%;
+            padding-right: 3%;
+            }
+
+            .textleft1 ul li
+            {
+                margin-bottom: 13px;
+            }
             .imageright
             {
-            height: 450px;
+            height: 420px;
             float: right;
             width: 50%;
-            margin-top: 0px;
+            margin-top: 40px;
             }
+
+            .el
+            {
+                color: #87111C;
+                font-weight: bold;
+            }
+
+
             .past2
             {
-            width: 1080px;
-            height: 470px;
+            width: 1080;
+            height: 620px;
             border-bottom: 0px solid grey;
             padding-bottom: 2%;
             background-color: #262630;
@@ -965,24 +1048,6 @@
             margin-bottom:0; 
             }
 
-            .spez
-            {
-                font-weight: bold;
-                font-style: italic;
-                letter-spacing:1px;
-                font-family: 'Playfair';
-            }
-            .spez1
-            {
-                letter-spacing:1px;
-                font-family: 'Playfair';
-                color: #fff663;
-                font-size: 23px;
-                font-style: italic;
-                padding: 0;
-                margin:0;
-            }
-
             #den
             {
                 margin-top: 15px; 
@@ -1003,15 +1068,23 @@
 
             .imageleft
             {
-            height: 430px;
+            height: 420px;
             float: left;
             width: 50%;
-            margin-top: 1%;
+            margin-top: 9%;
+            }
+            .imageleft8
+            {
+                height: 350px;
+            float: left;
+            margin-left: 3%;
+            width: 45%;
+            clear: both;
             }
             .past3
             {
             width: 100%;
-            height: 410px;
+            height: 790px;
             padding-bottom: 3%;
             padding-left: 60px;
             padding-right: 60px;
@@ -1020,6 +1093,13 @@
             padding-top: 0%;
             margin-top: 0;
             clear: both;
+            }
+
+
+            .textright2
+            {
+                float: right;
+                width: 50%;
             }
             .headerleft4
             {
@@ -1041,34 +1121,102 @@
             }
             .hh3
             {
-            padding: 0;
-            margin: 0; 
+            padding-bottom: 0;
+            margin-bottom: 0; 
             }
-            .hh2
+            .montag
             {
-                padding: 0;
-                margin: 0; 
-                color: #262630;
-                padding-left: 11%;
+            height: 1600px;
+            width: 780px; 
+            margin: auto;
             }
-
-
-
-            .maroon1
+            .montag table
             {
-            font-weight:normal;
-            font-style:italic; 
             width: 100%;
+            margin: auto;
+            margin-top: 25px;
+            border-collapse: collapse;
+            text-align: left;
+            }
+            .montag td, th {
+            border: 1px solid maroon;
+            padding: 3px 7px 2px 7px;
+            width: 50%;
+            }
+            .montag th {
+            text-align: center;
+            padding: 5px;
+            background-color: #ffbc13;
+            color: #fff;
+            }
+            .montag tr:nth-child(odd) { background-color: #f7eac89f; }
+            .montag2
+            {
+            width: 30%;
+            float: left;
+            padding-top: 22px;
+            font-size: 20px;
+            }
+            .montag3
+            {
+            width: 45%;
+            float: left;
+            padding-top: 22px;
+            font-size: 20px;
+            }
+            .ryka
+            {
+            border: 1px solid maroon;
+            color: black;
+            }
+            .plus
+            {
+            list-style-image: url(плюс.png);
+            width: 90%;
+            }
+            .minus
+            {
+            list-style-image: url(минус.png);
+            width: 90%;
+            }
+            .maroon
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-size: 23px;
+            padding-left: 2%;
+            margin-left: 1%;
+            width: 44%;
+            }
+            .maroon2
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            padding-left: 2%;
+            width: 98%;
+            }
+            .maroon3
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-size: 23px;
+            padding-left: 2%;
+            width: 90%;
+            }
+            .maroon4
+            {
+            border-bottom: 0px solid maroon;
+            font-weight:bold;
+            font-style:italic; 
+            width: 50%;
             margin:auto;
-            padding-top: 10px;
-            padding-bottom:  3%;
-            letter-spacing: 3px;
+            padding-top: 30px;
+            padding-bottom:  2%;
             font-size: 35px;
             text-align: center;
-            color: #fff663;
+            color: #87111C;
             font-family: 'Playfair';
             }
-
             .headermontagleft
             {
             background-color: #ffbc13;
@@ -1105,58 +1253,10 @@
             float: right;
             }
             /*telo end*/
-            /*kntakt*/
-            .kontakt
-            {clear: both;
-            width: 100%;
-            margin: auto;
-            margin-top: 100px;
-            background-color: white;
-            }
-            .headerkont
-            {
-                text-align: left;
-                letter-spacing: 2px;
-                font-size: 30px;
-                padding-left: 10%;
-                padding-bottom: 3%;
-                font-family: "Playfair";
-            }
-            .kont1, .kont2,.kont3,.kont4
-            {
-            float: left;
-            width: 21.5%;
-            border: 0px solid grey;
-            height: 100px;
-            margin-left: 2%;
-            text-align: left;
-            padding-right: 1%
-            }
-
-            .kont2
-            {
-              padding-top: 20px;
-              height: 80px;
-            }
-            .maroon4
-            {
-            border-bottom: 0px solid maroon;
-            font-weight:bold;
-            font-style:italic; 
-            width: 50%;
-            margin:auto;
-            padding-top: 30px;
-            padding-bottom:  2%;
-            font-size: 35px;
-            text-align: center;
-            color: #87111C;
-            font-family: 'Playfair';
-            }
-            /*kontakt end*/
             </style>
     </head>
 <body>
-        <div class="menu">
+    <div class="menu">
             <div class="headd">
                 <div id="logim"><img src="123.png" width="100%" height="100%"></div>
                 <div id="rightup">
@@ -1188,23 +1288,24 @@
                 <li>
                     <a href='naves.html'>Навесы</a>
                     <ul>
-                        <li><a href='#naves'>О навесах</a></li>
-                        <!--<li><a href='#yst_nav'>Установка навесов</a></li>-->
-                        <li><a href='#calc'>Расчёт стоимости</a></li>
-                        <li><a href='#otvet'>Ответы на вопросы</a></li>
-                        <li><a href='#zakaz'>Заказать навес</a></li>
-                        <li><a href='#o_kont'>Контакты</a></li>
+                        <li><a href='naves.html#naves'>О навесах</a></li>
+                        <!--<li><a href='naves.html#'>Установка навесов</a></li>-->
+                        <li><a href='naves.html#calc'>Расчёт стоимости</a></li>
+                        <li><a href='naves.html#zakaz'>Ответы на вопросы</a></li>
+                        <li><a href='naves.html#otvet'>Заказать навес</a></li>
+                        
+                        <li><a href='naves.html#o_kont'>Контакты</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href='besedki.html'>Беседки</a>
                     <ul>
                         
-                        <li><a href='besedki.html#katalog'>Каталог</a></li>
-                        <li><a href='besedki.html#besedka'>О беседках</a></li>
-                        <li><a href='besedki.html#vopros'>Ответы на вопросы</a></li> 
-                        <li><a href='besedki.html#zakaz'>Заказать беседку</a></li>
-                        <li><a href='besedki.html#o_kont'>Контакты</a></li>
+                        <li><a href='#katalog'>Каталог</a></li>
+                        <li><a href='#besedka'>О беседках</a></li>
+                        <li><a href='#vopros'>Ответы на вопросы</a></li> 
+                        <li><a href='#zakaz'>Заказать беседку</a></li>
+                        <li><a href='#o_kont'>Контакты</a></li>
                     </ul>
                 </li>
                 <li>
@@ -1266,280 +1367,255 @@
                 <div class="column">
                     <img class="q demo cursor" src="навесы/прим5.jpeg" style="width:100%; height: 150px" onclick="currentSlide(5)" alt="Nature and sunrise">
                 </div>
-                <div  id="o_svai" class="column">
+                <div  id="katalog" class="column">
                     <img  id="naves" class="q demo cursor" src="навесы/прим6.jpg" style="width:100%; height: 150px" onclick="currentSlide(6)" alt="Snowy Mountains">
                 </div>
             </div>
         </div>
-        <div class="main">
-
-
-
-            <div class="past">
-                <div class="maroon4">Навесы из поликарбоната  </div>
+        <div class="container1"> 
+            <div class="main">
+                <p class="kat">Наш каталог</p>
+                <div id="mi-slider" class="mi-slider">
+                    <ul>
+                        <li><a href="#"><img src="беседки/прим1.jpg" alt="img12">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="беседки/прим2.jpg" alt="img13">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="беседки/прим3.jpg" alt="img14">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="беседки/прим4.jpg" alt="img15">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="беседки/пл1.jpg" alt="img01">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="беседки/пл2.jpg" alt="img02">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                            
+                        <li><a href="#"><img src="беседки/пл3.jpg" alt="img04">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="беседки/птц.jpg" alt="img05">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="беседки/пт2.jpg" alt="img06">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="беседки/пт1.jpg" alt="img07">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="images/9.jpg" alt="img09">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="images/10.jpg" alt="img10">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="images/11.jpg" alt="img11">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                    </ul> 
+                    <ul>
+                        <li><a href="#"><img src="комплексы/п5.jpg" alt="img09">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="комплексы/п1.jpg" alt="img10">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="комплексы/п4.jpg" alt="img11">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><img src="комплексы/н3.jpeg" alt="img12">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="комплексы/н1.jpeg" alt="img13">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                        <li><a href="#"><img src="комплексы/5.jpg" alt="img14">
+                            <h4 class="zagolov">Качеля-мишка</h4>
+                            <p>Размеры:</p>
+                            <p>Высота:</p>
+                            <p>Ширина:</p>
+                            <p>Длина:</p>
+                            <p>3333 рублей</p>
+                            <div class="bu">Заказать</div></a></li>
+                    </ul>
+                    <nav>
+                        <a href="#">Беседки</a>
+                        <a href="#">Лавочки</a>
+                        <a href="#">Туалеты</a>
+                        <a href="#">Горки</a>
+                        <a id="besedka" href="#">Песочницы</a> 
+                    </nav>
+                </div>
+            </div>
+        </div><!-- /container -->
+        <div class="main"> 
+            <div class="svai">Детские игровые комплексы </div>
+              <div class="past">
+                
                 <div class="past1">
                     <div class="textleft">
-                        <div class="headerleft2">
-                            <p class="headerleft">Поликарбонат </p>
-                        </div>
-                        <p class="headerleft7"> Это особый материал строительного назначения, внешний вид которого создает иллюзию хрупкости и невесомости. Один пласт поликарбоната более чем в 7 раз крепче, чем пластик или ПВХ и прочнее стекла в 200 раз! </p>
-                        <div class="headerleft2">
-                            <p class="headerleft3">Вам нужен навес?</p>
-                        </div>
-                            <p>Мы предлагаем вам изготовление и установку различных типов навесов из поликарбоната в Новосибирске по выгодным ценам. </p>
-                            <p>Навесы из поликарбоната очень универсальны в своем использовании. Они применяются для защиты авто от дождя и уф-излучений, негативно влияющих на лакокрасочную поверхность. </p>
+                        <div class="headerleft2"> <p class="headerleft">Преимущества </p> </div>
+                        <p> Очень важно, чтобы дети активно занимались на свежем воздухе, потому что это влияет на их рост и развитие. </p>
+                        <p>Для этих целей у нас есть детские уличные игровые площадки, оснащенные горками, лесенками, качелями и другими комплексами.</p>
+                        <p>Наши детские площадки будут интересны и увлекательны для детей совершенно разных возрастов и займут их на долгое время.</p>
+                        <p>Наша компания предлагает широкий выбор как детских комплексов, так и отдельных их компонентов, различающихся по форме, материалу и размеру.</p>
                     </div>
-                    <div class="imageright1"><img src="навесы/122.jpg" width="100%" height="80%"></div>
-                </div>
-                </div>
-                <div class="past2">
-                    <div class="imageleft"><img src="навесы/122.jpg" width="100%" height="100%"></div>
-                    <div class="headerright">
-                        <p class="headerright2">Разновидности поликарбонатовых навесов</p>
-                    </div>
-                    <div class="textright">
-                        <p id="den">Навесы из поликарбоната, создают комфортную зону отдыха с тенью в жаркий летний день.</p>
-                        <p> По особенностям конструкции существуют: </p>
-                        <p>1) Встроенные, их планируют ещё на этапе проектирования строительства. </p>
-                        <p>2) Пристроенные навесы, можно пристроить к любой хозяйственной постройке.</p>
-                        <p>3) Отдельные, устанавливаются на участвке как отдельное, целевое сооружение.</p>
-                        <p class="spez1"> Все необходимые расчеты может сделать наш специалист!</p>
-                    </div>
-                </div>
-                <div class="past3">
-                    <div class="textleft">
-                        <div class="headerleft4">
-                            <p class="hh3">Преимущества наших навесов </p>
-                            <p class="hh2">из металла и поликарбоната:</p>
-                        </div>
-                        <ul>
-                           <li> Прочность - поликарбонат устойчив к низким и высоким температурам, а также выдерживает любые природные явления.</li>
-                           <li>Хорошая светопроницаемость - это качество важно для дворов, где мало солнечных лучей;</li>
-                           <li>Длительный срок службы.</li>
-                           <li>Гибкость - поликарбонат можно выгнуть в любую дугу.</li>
-                           <li>Поликарбонат имеет толщину 8-10мм с УФ-защитой</li>
-                           <li>Низкая способность горения. Навес из поликарбоната имеет способность к самозатуханию.</li>
-                        </ul>
-                        <h3 class="spez" id="calc">Гарантия 12 месяцев!</h3>
-                    </div>
-                    <div class="imageright"><img src="навесы/вид2.jpg" width="100%" height="100%"></div>
-
-                </div>
-
-            <div class="svai">Калькулятор навесов для машин </div>
-            <div class="calk_sw">
-                <div class="caleft">
-                    <div class="kalkulimg"> <img id="kalkyl" src="навесы/1.png" width="100%" height="100%"> 
-                        <h2 id="imgtext1" style="transform: rotate(270deg);position: absolute; top:220px; left: 0px;">2 м.</h2>
-                        <h2 id="imgtext2" style="transform: rotate(330deg);position: absolute; top:310px; right: 50px;">4 м.</h2>
-                        <h2 id="imgtext3" style="transform: rotate(8deg);position: absolute; top:365px; left: 150px;">2 м.</h2></div>
-                    <div class="block">
-                        <div class="rangeslider">
-                            <p class="zag">Длина навеса (в метрах)</p>
-                            <input class="znch" type="number" id="length_out" min="4" max="12" value="4" step="0.1">
-                            <input type="range" min="4" max="12" value="4" step="0.1" 
-                                class="myslider textt" id="length_in">
-                        </div>
-                    </div>
-                    <div class="block1">
-                        <div class="rangeslider">
-                            <p class="zag">Ширина навеса (в метрах)</p>
-                            <input class="znch" type="number" id="width_out" min="2" max="12" value="2" step="0.1">
-                            <input type="range" min="2" max="12" value="2" step="0.1" 
-                                class="myslider textt" id="width_in">
-                        </div>
-                    </div>
-                    <div class="block23">
-                        <div class="rangeslider">
-                            <p id="hui" class="zag">Высота навеса (в метрах)</p>
-                            <input class="znch" type="number" id="height_out" min="2" max="6" value="2" step="0.1">
-                            <input type="range" min="2" max="6" value="2" step="0.1" 
-                                class="myslider textt" id="height_in">
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div class="block24">
-                      <p class="zag">Тип крыши(фермы)</p>
-                        <div id="myDIV">
-                            <button class="btn active1" value="1"><img src="навесы/f1.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="2"><img src="навесы/f2.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="3"><img src="навесы/f3.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="4"><img src="навесы/f4.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="5"><img src="навесы/f5.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="6"><img src="навесы/f6.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="7"><img src="навесы/f7.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="8"><img src="навесы/f8.jpg" height="100%" width="100%"></button>
-                            <button class="btn" value="9"><img src="навесы/f9.jpg" height="100%" width="100%"></button>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="block2">
-                        <div class="block3">
-                            <p class="zag2">Выберите поликарбонат</p>
-                            <select id="mat" class="textt poli" name="select">
-                                <option selected value="1">Сотовый поликартонат 8мм</option>
-                                <option value="2">Сотовый поликартонат 10мм</option>
-                            </select>
-                        </div>
-                        <div class="block4">
-                            <p class="zag2">Цвет поликартоната</p>
-                            <select id="color_mat" class="textt colorr" name="select">
-                                <option selected value="1">Прозрачный</option>
-                                <option value="2">Бронза</option>
-                                <option value="3">Опал</option>
-                                <option value="4">Зеленый</option>
-                                <option value="5">Красный</option>
-                                <option value="6">Синий</option>
-                                <option value="7">Бирюза</option>
-                            </select>
-                        </div>
-                        <div class="block5">
-                            <p class="zag2">Окрас каркаса</p>
-                            <select id="okras" class="textt kark" name="select">
-                                <option selected value="1">Грунт</option>
-                                <option value="2">Хаммерайт, Дали 3 в 1</option> 
-                            </select>
-                        </div>
-
-  
-                        <div class="block6">
-                            <p class="zag2">Тип установки</p>
-                            <select id="type_ust" class="textt yst" name="select">
-                                <option selected value="1">На пятаки</option>
-                                <option value="2">Бетонирование</option> 
-                                <option value="3"> Без установки</option>
-                            </select>
-                        </div>
-
-                        <div class="block7">
-                            <p class="zag2">Размер столбов</p>
-                            <select id="razmer" class="textt stol" name="select">
-                                <option selected value="1">60*60</option>
-                                <option value="2">80*80</option>
-                                <option value="3">100*100</option>
-                            </select>
-                        </div>
-                        
-                        
-                        <div class="block8">
-                            <p class="zag2">Регион доставки</p>
-                            <select id="region" class="textt poli" name="select">
-                                <option selected value="1">Новосибирск</option>
-                                <option value="2">Новосибирская обл.</option>
-                                <option value="3">Другой город</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="butt2">Заказать навес</div>
-                    <div class="price1">
-                        <p class="odna">Стоимость материалов</p>
-                        <p class="odna">Стоимость установки</p>
-                        <p class="odna" id="itogg">24412 рублей</p>
-                        <p class="odna" id="dostavka">15000 рублей</p>
-                    </div>
-                    <div class="price2">
-                        <p class="odna2">Итоговая стоимость</p>
-                        <p class="priceit" id="end">39412 рублей</p>
-                    </div>
-                   <!--  зависимости от выбранного с установкой или без, выводить одну цену, не 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    <div class="price3">
-                        <p class="odna2">Итоговая стоимость без монтажа</p>
-                        <p id="bezmon">2755 рублей</p>
-                    </div>
-                    <div class="price4">
-                        <p class="odna">Итоговая стоимость</p>
-                        <p id="itogg">3655 рублей</p>
-                    </div>-->
-                    <p class="toch">Расчеты могут иметь некоторую погрешность, в связи с изминением цен на металл и комплектующих. Данный расчет не является офертой, и точную стоимость может определить специалист, исходя из Ваших пожеланий, и места установки конструкции.</p>
-
-
-                    <div class="smeta">
-                      <p class=" zagsmeta"> Смета</p>
-                        <table>
-                                <tr class="smeta">
-                                    <th style="width: 52%;">Наименование</th>
-                                    <th style="width: 12%;">Кол-во</th>
-                                    <th style="width: 12%;">Ед.изм.</th>
-                                    <th style="width: 12%;">Цена</th>
-                                    <th style="width: 12%;">Сумма, Р</th>
-                                </tr>
-                                <tr>
-                                    <td>Металлические столбы</td>
-                                    <td id="st_kol">4</td>
-                                    <td>шт.</td>
-                                    <td id="st_val">1340</td>
-                                    <td id="st_sum">5360</td>
-                                </tr>
-                                <tr>
-                                    <td>Подстропильная ферма</td>
-                                    <td>2</td>
-                                    <td>шт.</td>
-                                    <td id="podsferm_val">2400</td>
-                                    <td id="podsferm_sum">4800</td>
-                                </tr>
-                                <tr>
-                                    <td>Стропильная ферма</td>
-                                    <td id="sferm_kol">3</td>
-                                    <td>шт.</td>
-                                    <td id="sferm_val">2420</td>
-                                    <td id="sferm_sum">7260</td>
-                                </tr>
-                                <tr>
-                                    <td class="" >Лаги</td>
-                                    <td id="lag_kol">3</td>
-                                    <td>шт.</td>
-                                    <td id="lag_val">680</td>
-                                    <td id="lag_sum">2040</td>
-                                </tr>
-                                <tr>
-                                    <td>Сотовый поликарбонат</td>
-                                    <td id="pol_kol">8</td>
-                                    <td>кв.метр</td>
-                                    <td id="pol_val"> 490</td>
-                                    <td id="pol_sum">3920</td>
-                                </tr>
-                                 <tr>
-                                    <td>Соединительные профили</td>
-                                    <td>1</td>
-                                    <td>шт.</td>
-                                    <td id="soed_val">392</td>
-                                    <td id="soed_sum">392</td>
-                                </tr>
-                                 <tr>
-                                    <td id="okr_name">Окрашивание каркаса - Грунт</td>
-                                    <td id="okr_kol">8</td>
-                                    <td>кв.метр</td>
-                                    <td id="okr_val"> 80</td>
-                                    <td id="okr_sum">640</td>
-                                </tr>
-                                <tr>
-                                    <td id="stoim1" colspan="4">Стоимость материалов</td>
-                                    <td id="Sum">24412</td>
-                                </tr>
-                                <tr>
-                                    <td id="stoim2" colspan="4">Стоимость работ+доставка</td>
-                                    <td id="">15000</td>
-                                </tr>
-                                <tr id="otvet">
-                                    <td id="stoim3" colspan="4">Итого</td>
-                                    <td id="">39412</td>
-                                </tr>
-                        </table>
-                    </div>
+                    <div class="imageright1"><img src="комплексы/112.jpg" width="100%" height="80%"></div>
                 </div>
             </div>
 
+                <div class="past2">
+                    <div class="imageleft"><img src="комплексы/111.jpg" width="100%" height="100%"></div>
+                    <div class="headerright"> <p class="headerright2">Важно учитывать некоторые моменты:</p></div>
+                    <div class="textright">
+                        <ul>
+                              <li>Первое, это возрастная группа, для которой приобретается игровая площадка</li>
+                              <li>Второй важный момент это место, где вы собираетесь ее устанавливать.</li>
+                        </ul>
+                        <p id="den">Различия игровых комплексов в зависимости от возрастов:</p>
+                        <ul>
+                              <li>Для детей младшего дошкольного возраста отличным вариантом игровой площадки будут: песочница и качели.</li>
+                              <li>Дети младшего школьного возраста по достоинству оценят разнообразие комплексов для активного времяпровождения. Это горки, качели-балансиры и карусели. Ведь в этом возрасте дети отличаются своей подвижностью.</li>
+                        </ul>
+                        <p class="garant1"> Все необходимые расчеты может сделать наш специалист!</p>
+                    </div>
+                </div>
+                
+                <div class="past3">
+                    <div class="textleft1">
+                        <div class="headerleft4"> <p class="hh3">Элементы детских комплексов</p> </div>
+                        <p> У нас вы можете заказать детский комплекс или элементы отдельно!</p>
+                        <ul>
+                            <li><span class="el">"Качели"</span> - это самая любимая детьми конструкция для всех возрастов. Для младшего возраста предусмотрены конструкции небольшой высоты с ограждающим элементом вокруг сиденья. Для более старшего возраста устанавливается конструкция с открытыми сиденьями, большей высоты. </li>
 
+                            <li><span class="el"> "Качалка-балансир"</span> - конструкцию используют для детей любого возраста, необходимая безопасность создаётся поручнями вокруг сиденья.</li>
+                            <li><span class="el">"Горка"</span> бывает разной высоты, в зависимости от возрастных категорий. Форму, украшение и материл вы можете выбрать любой. </li>
+                             <!--<li>«Качалка на пружинке» - для площадок с ограниченной площадью можно использовать 1-2 ярко окрашенные качалки, для детей малого возраста 2-3 года. Различного формата.</li>
+                            Готовые комплексы для игровых зон
+                            Чтобы хорошо оборудовать детскую площадку можно самим сделать набор элементов из предлагаемых производителями, или остановить свой выбор на скомплектованных игровых комплексах.
+                            Второй вариант позволит получить ряд преимуществ:
+                            Это полностью спроектированный комплекс, в котором учтены потребности детей всех возрастов. Соответственно данная зона отдыха будет интересна как малышам, так и подросткам.
+                            В комплексе подобрано оптимальное сочетание площадок для активного и пассивного движения. Соответственно существует возможность реализации разного рода игр.
+                            Правильная планировка ведёт к компактности детской площадки. Это сокращает площадь дворовой территории и облегчает монтаж.
+                            Зачастую, подбирая элементы для монтажа детских площадок самостоятельно, или руководствуясь проектом производителя, вы добиваетесь более разнообразного результата.-->
+                            </ul>
+                        </div>
+                        <div class="imageright"><img src="комплексы/прим1.jpg" width="100%" height="100%"></div>
+                        <div class="imageleft8"><img src="комплексы/вид2.jpg" width="100%" height="100%"></div>
+                        <div class="textright2">
+                            <ul>
+                              <li><span class="el"> "Карусели" </span>- это элемент детской площадки, представляющий собой вращающуюся платформу, на которой установлены сидения.</li>
+                              
+                              <li> <span class="el">"Песочницы"</span> предназначены для детей младшего возраста, ограждены безопасными бортиками. При желании можно поставить навес, который защищает играющих детей от дождя и солнца.</li>
+                              <li><span id="vopros" class="el"> "Теневые навесы" </span>- уличные неутепленные конструкциив в виде крыши, расположенные на опорах, могут иметь несколько стен. Они хорошо защитят ваших детей от дождя и солнца. </li></ul>
 
-        <div id="test" class="quests">
+                        <p class="garant" id="calc">Гарантия 12 месяцев!</p>
+                    </div>
+            </div>
+            <div id="test" class="quests">
             <div class="maroon1">Ответы на популярные вопросы </div>
             <div class="quest1">
                 <div class="icon1">
@@ -1592,14 +1668,14 @@
                     Срок службы нашего сотового поликарбоната может достигать более 25 лет, и при этом все первоначальные свойства не ухудшаются.
                 </div>
             </div>
-               <div  id="o_zakaz" class="quest9">
+               <div  id="zakaz" class="quest9">
                 <div class="icon9">
                     <svg width="28" height="28">
                         <line stroke="black" x1="14" y1="4" x2="14" y2="24"/>
                         <line stroke="black" x1="4" y1="14" x2="24" y2="14"/>
                     </svg>
                 </div>
-                <a href="" class="spoiler9"> Влияет ли климат на навес из поликарбоната?</a>
+                <a class="spoiler9"> Влияет ли климат на навес из поликарбоната?</a>
                 <div class="spoiler_body">
                     Оптимальный диапазон, при котором сохраняются технические параметры, составляет от -50 до +125 градусов. А также выдерживает любые природные явления.
                 </div>
@@ -1692,10 +1768,7 @@
             </div>
 </footer>
 
-</div>
-
-<script src="навесы/kalk.js"></script>
-
+        </div>
         <script type="text/javascript">
             $(function(){
             if($('.nurdsami_pgernlab>ul>li').hasClass('selected')){
@@ -1788,5 +1861,12 @@ $(document).ready(function(){
 
 });
 </script>
-    </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="jquery.catslider.js"></script>
+<script>
+        $(function() {
+            $( '#mi-slider' ).catslider();
+         });
+</script>
+</body>
 </html>

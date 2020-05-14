@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>kalc</title>
+        <script type="text/javascript" src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script type="text/javascript" src='nav.js'></script>
+        <script type="text/javascript" src='nav2.js?ver=1.0'></script>
+        <script type="text/javascript" src='slider.js?ver=1.0'></script>
+        <script type="text/javascript" src='spoiler.js?ver=1.0'></script>
+        <script type="text/javascript" src='start.js?ver=1.0'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <style type="text/css">
+
+
+
+            input:focus { outline: none; }
+            input:active{ outline: none; }
+            select:focus { outline: none; }
+            select:active{ outline: none; }
+
+           /*смета*/
+
+            .zagsmeta
+            {
+              font-size: 30px;
+              font-weight: 600;
+              margin-top: 40%;
+              text-align: center; 
+            }
+            .smeta table
+            {
+              width: 80%;
+              margin-left: 10%; 
+              margin-top: 20px;
+              border-collapse: collapse;
+              text-align: center;
+            }
+            .smeta td, th {
+                    border: 1px solid #d9d9d9;
+                    padding: 3px 7px 2px 7px;
+                    width: 10%;
+                    height: 35px;
+                  }
+            .smeta th {
+                    text-align: center;
+                    padding: 5px;
+                    background-color: #ffbc13;
+                    color: #fff;
+                  }
+            .smeta tr:nth-child(odd) { background-color: #f7eac89f; }
+            .summa
+             {
+              text-align: right;
+             }
+
+             .smeta td:first-child 
+             {
+              width: 35%;
+              text-align: left;
+             }
+
+
+
+             #stoim1,#stoim2,#stoim3
+             {
+              text-align: right;
+             }
+
+            /*end smeta*/
+
+
+
+            /*КАЛЬКУЛЯТОР начало*/
+            .kalkul
+
+
+            .slider {
+            width:200px;
+            height:11px;
+            top:-30px;
+            background:#eee;
+            position:relative;
+            margin:0 130px;
+            padding:0 10px;
+            }
+            .slider1 {
+            width:200px;
+            height:11px;
+            top:-30px;
+            background:#eee;
+            position:relative;
+            margin:0 130px;
+            padding:0 10px;
+            }
+            .ui-slider-handle {
+            width:24px;
+            height:24px;
+            position:absolute;
+            top:-7px;
+            margin-left:-12px;
+            z-index:200;
+            background:#fc0;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            }
+            .ui-widget-header {
+            background:#f00;
+            height:8px;
+            left:1px;
+            top:1px;
+            position:absolute;
+            }
+            .textt
+            {
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            }
+            .kol
+            {
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            width: 150px;
+            padding-left: 15px;
+            height: 25px;
+            margin-top: 0;
+            margin-top: 0;
+            }
+            .gorod
+            {
+            width: 200px;
+            height: 34px;
+            }
+            .poli
+            {
+            width: 270px;
+            height: 34px;
+            }
+
+            .colorr
+            {
+              width: 155px;
+              height: 34px;
+            }
+
+            .kark
+            {
+              width: 100px;
+              height: 34px;
+            }
+
+            .yst
+            {
+              width: 155px;
+              height: 34px;
+            }
+
+            .stol
+            {
+              width: 100px;
+              height: 34px;
+            }
+
+            .zag
+            {
+            text-align: left;
+            padding-bottom: 2%;
+            margin-top:0;
+            }
+            .zag1
+            {
+            text-align: left;
+            padding-bottom: 3%;
+            margin-top:0;
+            }
+            .zag2
+            {
+            text-align: left;
+            padding-bottom: 0;
+            margin-top:0;
+            }
+            .znch
+            {
+            position: relative;
+            border:3px solid #ffbc13;
+            border-radius: 7px; 
+            -webkit-border-radius: 7px; 
+            -moz-border-radius: 7px;
+            font-size: 18px; 
+            width: 50px;
+            height: 25px;
+            top:-10px;
+            text-align: center;
+            }
+            .znch2
+            {
+            position: relative;
+            width: 57px;
+            height: 34px;
+            text-align: center;
+            }
+            .znch3
+            {
+            position: relative;
+            width: 150px;
+            height: 34px;
+            text-align: center;
+            }
+            .calk_sw
+            {
+            max-width: 1200px;
+            background-color: white;
+            margin: auto;
+            }
+            .caleft
+            {
+            width: 80%;
+            margin: auto;
+            height: 2000px;
+            background-color: white;
+            border: 0px solid black;
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+            .kalkulimg
+            {
+            float: right;
+            width: 54%;
+            height: 463.5px;
+            margin-top: 6%;
+            padding-bottom: 0px;
+            border: 0px solid grey;
+            }
+            .block
+            {
+            width: 39%;
+            padding-top: 6%;
+            float: left;
+
+            }
+            .block1
+            {
+            width: 39%;
+            margin-right: 6%;
+            float: left;
+            padding-top: 2%;
+            padding-bottom: 2%;
+             
+            }
+            .block23
+            {
+            width: 39%;
+            margin-right: 6%;
+            float: left;
+            margin-bottom: 0;
+            padding-bottom: 2%;
+            border-bottom: 1px solid grey; 
+            }
+            .block24
+            {
+              height: 280px;
+              width: 40%;
+              padding-top:400px;
+            }
+            .block2
+            {
+            width: 45%;
+            float: left;
+            height: 300px;
+
+            clear: both;
+            }
+            .block3
+            {
+            width: 65%;
+            float: left;
+            padding-bottom: 2%;
+            padding-top: 2%;
+            height: 80px;
+            }
+            .block4
+            {
+            width: 43%; 
+            float: left;
+            padding-bottom: 0%;
+            padding-top: 2%;
+            margin-right: 1%;
+            height: 80px;
+            }
+            .block5
+            {
+            width: 50%;
+            float: left;
+            padding-top: 2%;
+            }
+            .block6
+            {
+            width: 45%;
+            float: left;
+            padding-top: 3%;
+            clear: both;
+            }
+            .block7
+            {
+            width: 55%;
+            float: left;
+            padding-top: 3%;
+            }
+
+            .block8
+            {
+            width: 100%;
+            float: left;
+            padding-top: 3%;
+            }
+            .rangeslider{
+            width: 100%;
+            }
+            .myslider {
+            -webkit-appearance: none;
+            background: #FCF3CF  ;
+            width: 50%;
+            height: 20px;
+            opacity: 2;
+            border-radius: 150px;
+            }
+            .myslider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            cursor: pointer;
+            background: maroon  ;
+            width: 11%;
+            height: 20px;
+            border-radius: 150px;
+            }  
+            .myslider:hover {
+            opacity: 1;
+            }
+            .price
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 15%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price1
+            {
+            float: left;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price2
+            {
+            float: left;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            .price4
+            {
+            float: right;
+            width: 46%;
+            padding-top: 3%;
+            padding-left: 3%;
+            margin-top: 3%;
+            border: 1px solid grey;
+            height: 80px;
+            font-size: 20px;
+            }
+            #endust, #dostavka, #end, #bezmon, #itogg
+            {
+            font-weight: bold;
+            font-size: 25px;
+            padding-top: 8px; 
+            }
+            .odna
+            {
+            float: left;
+            width: 50%;
+            padding: 0;
+            margin: 0;
+            }
+            .odna2
+            {
+            float: left;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            }
+
+            .priceit
+            {
+              font-weight: 600;
+              font-size: 33px; 
+            }
+            .butt2
+            {
+            float: left;
+            width: 49%;
+            height: 40px;
+            background-color: #ffbc13;
+            border-radius: 25px;
+            margin-top: 0%;
+            margin-bottom:0; 
+            text-align: center;
+            margin-right: 5%;
+            line-height: 40px;
+            cursor: pointer;
+            }
+            /*КАЛЬКУЛЯТОР конец*/
+            body {
+            margin:0;
+            background: url(фон2.jpg);
+            font-size: 18px;
+            }
+            .btn {
+            border: none;
+            outline: none;
+            padding: 3px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+            height: 65px;
+            width: 120px;
+            }
+            .active, .btn:hover {
+            background-color: #ffbc13;
+            color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div  class="kalkul">
+            <div class="svai">КАЛЬКУЛЯТОР ВИНТОВЫХ СВАЙ </div>
+            <div class="calk_sw">
+                <div class="caleft">
+                    <div class="kalkulimg"> <img id="kalkyl" src="1лсог.jpg" width="100%" height="100%"> </div>
+                    <div class="block">
+                        <div class="rangeslider">
+                            <p class="zag">Длина навеса (в метрах)</p>
+                            <input class="znch" type="number" id="length_out" min="4" max="12" value="4" step="0.1">
+                            <input type="range" min="4" max="12" value="4" step="0.1" 
+                                class="myslider textt" id="length_in">
+                        </div>
+                    </div>
+                    <div class="block1">
+                        <div class="rangeslider">
+                            <p class="zag">Ширина навеса (в метрах)</p>
+                            <input class="znch" type="number" id="width_out" min="2" max="12" value="2" step="0.1">
+                            <input type="range" min="2" max="12" value="2" step="0.1" 
+                                class="myslider textt" id="width_in">
+                        </div>
+                    </div>
+                    <div class="block23">
+                        <div class="rangeslider">
+                            <p class="zag">Высота навеса (в метрах)</p>
+                            <input class="znch" type="number" id="height_out" min="2" max="6" value="2" step="0.1">
+                            <input type="range" min="2" max="6" value="2" step="0.1" 
+                                class="myslider textt" id="height_in">
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="block24">
+                      <p class="zag">Тип крыши(фермы)</p>
+                        <div id="myDIV">
+                            <button class="btn active" value="1"><img src="навесы/f1.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="2"><img src="навесы/f2.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="3"><img src="навесы/f3.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="4"><img src="навесы/f4.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="5"><img src="навесы/f5.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="6"><img src="навесы/f6.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="7"><img src="навесы/f7.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="8"><img src="навесы/f8.jpg" height="100%" width="100%"></button>
+                            <button class="btn" value="9"><img src="навесы/f9.jpg" height="100%" width="100%"></button>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="block2">
+                        <div class="block3">
+                            <p class="zag2">Выберите поликарбонат</p>
+                            <select id="mat" class="textt poli" name="select">
+                                <option selected value="1">Сотовый поликартонат 8мм</option>
+                                <option value="2">Сотовый поликартонат 10мм</option>
+                            </select>
+                        </div>
+                        <div class="block4">
+                            <p class="zag2">Цвет поликартоната</p>
+                            <select id="color_mat" class="textt colorr" name="select">
+                                <option selected value="1">Прозрачный</option>
+                                <option value="2">Бронза</option>
+                                <option value="3">Опал</option>
+                                <option value="4">Зеленый</option>
+                                <option value="5">Красный</option>
+                                <option value="6">Синий</option>
+                                <option value="7">Бирюза</option>
+                            </select>
+                        </div>
+                        <div class="block5">
+                            <p class="zag2">Окрас каркаса</p>
+                            <select id="okras" class="textt kark" name="select">
+                                <option selected value="1">Грунт</option>
+                                <option value="2">Хаммерайт, Дали 3 в 1</option> 
+                            </select>
+                        </div>
+
+  
+                        <div class="block6">
+                            <p class="zag2">Тип установки</p>
+                            <select id="type_ust" class="textt yst" name="select">
+                                <option selected value="1">На пятаки</option>
+                                <option value="2">Бетонирование</option> 
+                                <option value="3"> Без установки</option>
+                            </select>
+                        </div>
+
+                        <div class="block7">
+                            <p class="zag2">Размер столбов</p>
+                            <select id="razmer" class="textt stol" name="select">
+                                <option selected value="1">60*60</option>
+                                <option value="2">80*80</option>
+                                <option value="3">100*100</option>
+                            </select>
+                        </div>
+                        
+                        
+                        <div class="block8">
+                            <p class="zag2">Регион доставки</p>
+                            <select id="region" class="textt poli" name="select">
+                                <option selected value="1">Новосибирск</option>
+                                <option value="2">Новосибирская обл.</option>
+                                <option value="3">Другой город</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="butt2">Заказать навес</div>
+                    <div class="price1">
+                        <p class="odna">Стоимость материалов</p>
+                        <p class="odna">Стоимость доставки</p>
+                        <p class="odna" id="end"> рублей</p>
+                        <p class="odna" id="dostavka">1500 рублей</p>
+                    </div>
+                    <div class="price2">
+                        <p class="odna2">Итоговая стоимость</p>
+                        <p class="priceit" id=""> рублей</p>
+                    </div>
+                   <!--  зависимости от выбранного с установкой или без, выводить одну цену, не 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    <div class="price3">
+                        <p class="odna2">Итоговая стоимость без монтажа</p>
+                        <p id="bezmon">2755 рублей</p>
+                    </div>
+                    <div class="price4">
+                        <p class="odna">Итоговая стоимость</p>
+                        <p id="itogg">3655 рублей</p>
+                    </div>-->
+
+
+
+                    <div class="smeta">
+                      <p class=" zagsmeta"> Смета</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Наименование</th>
+                                    <th>Кол-во</th>
+                                    <th>Ед.изм.</th>
+                                    <th>Цена</th>
+                                    <th>Сумма, Р</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Металлические столбы</td>
+                                    <td id="">4</td>
+                                    <td>шт.</td>
+                                    <td>275</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>Подстропильная ферма</td>
+                                    <td id="">2</td>
+                                    <td>шт.</td>
+                                    <td>400</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>Стропильная ферма</td>
+                                    <td id="">3</td>
+                                    <td>шт.</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="" >Лаги</td>
+                                    <td id="">3</td>
+                                    <td>шт.</td>
+                                    <td id=""></td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>Сотовый поликарбонат</td>
+                                    <td id="">8</td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                 <tr>
+                                    <td>Соединительные профили</td>
+                                    <td id="">1</td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                 <tr>
+                                    <td id="">Окрашивание каркаса - Грунт</td>
+                                    <td id="">8</td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="stoim1" colspan="4">Стоимость материалов</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Сборка навеса</td>
+                                    <td id="">8</td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Установка столбов На пятаки</td>
+                                    <td id=""></td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Доставка</td>
+                                    <td id=""></td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="stoim2" colspan="4">Стоимость работ+доставка</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="">Амортизация оборудования и расходники</td>
+                                    <td id=""></td>
+                                    <td>шт.</td>
+                                    <td> 900</td>
+                                    <td id=""></td>
+                                </tr>
+                                <tr>
+                                    <td id="stoim3" colspan="4">Итого</td>
+                                    <td id=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var header = document.getElementById("myDIV");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+            var length_in = document.getElementById("length_in");
+            var length_out = document.getElementById("length_out");
+            var width_in = document.getElementById("width_in");
+            var width_out = document.getElementById("width_out");
+            var height_in = document.getElementById("height_in");
+            var height_out = document.getElementById("height_out");
+            var mat = document.getElementById("mat");
+            var color_mat = document.getElementById("color_mat");
+            var razmer = document.getElementById("razmer");
+            var okras = document.getElementById("okras");
+            var type_ust = document.getElementById("type_ust");
+            var region = document.getElementById("region");
+            length_in.oninput = function()
+            {
+              length_out.value = this.value;
+            }
+            length_out.oninput = function()
+            {
+              if(length_out.value > 12) length_out.value = 12;
+              length_in.value = this.value;
+            }
+            width_in.oninput = function()
+            {
+              width_out.value = this.value;
+            }
+            width_out.oninput = function()
+            {
+              if(width_out.value > 12) width_out.value = 12;
+              width_in.value = this.value;
+            }
+            height_in.oninput = function()
+            {
+              height_out.value = this.value;
+            }
+            height_out.oninput = function()
+            {
+              if(height_out.value > 6) height_out.value = 6;
+              height_in.value = this.value;
+            }
+            mat.oninput = function()
+            {
+              
+            }
+            color_mat.oninput = function()
+            {
+            
+            }
+            razmer.oninput = function()
+            {
+              
+            }
+            okras.oninput = function()
+            {
+              
+            }
+            type_ust.oninput = function()
+            {
+              
+            }
+            region.oninput = function()
+            {
+              
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            function checkdost(){
+              if(region.value==1)
+              {
+                if (kol.value>=15)
+                {
+                  dostavka.innerHTML="Бесплатно";
+                }
+                else
+                {
+                  dostavka.innerHTML="1500 рублей";
+                }
+              }
+              if (region.value==2)
+                {
+                  dostavka.innerHTML="1500 рублей";
+                }
+              if (region.value==3)
+                {
+                  dostavka.innerHTML="Более 1500 рублей";
+                }
+            }
+            
+            function itogo (){
+               bezmontag=sum*kol.value;
+              itogov=sum*kol.value+(kol.value*900);
+              if(region.value==1)
+              {
+                if (kol.value<15)
+                {
+                  itogov=itogov+1500;
+                  bezmontag=bezmontag+1500;
+                }
+              }
+              if (region.value==2)
+                {
+                  itogov=itogov+1500;
+                   bezmontag=bezmontag+1500;
+                }
+              if (region.value==3)
+                {
+                  itogov=itogov+1500;
+                   bezmontag=bezmontag+1500;
+                }
+              if(sum==0) {itogg.innerHTML="невозможно"; bezmon.innerHTML="невозможно";}
+              else
+              {
+                itogg.innerHTML=itogov+"   рублей";
+                 bezmon.innerHTML=bezmontag+"   рублей";
+              }
+            }
+            
+            function calc(){
+              sum=0;
+              
+              if(diam.value==76)
+              {
+            
+                if(output2.value==3) sum=290;
+                if(output2.value==3.5) sum=376;
+                if(output2.value==4) sum=411;
+              }
+              if(diam.value==89)
+              {
+                if(output2.value==3) sum=379;
+                if(output2.value==3.5) sum=418;
+                if(output2.value==4) sum=462;
+            
+              }
+              if(diam.value==108)
+              {
+                if(output2.value==3) sum=0;
+                if(output2.value==3.5) sum=487;
+                if(output2.value==4) sum=543;
+              }
+              if(diam.value==139)
+              {
+                if(output2.value==3) sum=0;
+                if(output2.value==3.5) sum=582;
+                if(output2.value==4) sum=646;
+              }
+              sum=sum*output.value;
+              if(sum==0) {end.innerHTML="невозможно"; bezmon.innerHTML="невозможно";}
+              else
+              {
+                if(lopost.value==1) sum=sum+275;
+                else sum=sum+550;
+                if(ogol.checked) sum=sum+400;
+              end.innerHTML=sum+"   рублей";
+              }
+            }
+            
+            
+            
+            kol.oninput = function()
+            {
+            endust.innerHTML=kol.value*900+"   рублей";
+            checkdost();
+              itogo();
+              kolsvai.innerHTML=kol.value;
+              kolmontag.innerHTML=kol.value;
+            }
+            
+            rangeslider.oninput = function() {
+              output.value = this.value;
+              calc();
+              itogo();
+            }
+            output.oninput = function() {
+            if(output.value > 4.5) output.value = 4.5;
+            if(output.value < 2.5) output.value = 2.5;
+            rangeslider.value = this.value;
+            calc();
+              itogo();
+            }
+            rangeslider2.oninput = function() {
+              output2.value = this.value;
+              calc();
+                itogo();
+            }
+            output2.oninput = function() {
+            if(output2.value > 4.5) output2.value = 4.5;
+            if(output2.value < 2.5) output2.value = 2.5;
+            rangeslider2.value = this.value;
+            calc();
+              itogo();
+            }
+            s1.oninput = function() {
+              calc();
+                itogo();
+            }
+            lopost.oninput = function() {
+              
+              calc();
+                itogo();
+            
+                lopos.innerHTML=lopost.value;
+                loposit.innerHTML=lopost.value*275;
+                if(lopost.value==1)
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="1 ЛОПАСТЬ С ОГОЛ.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="1 ЛОП.jpg";
+                  }
+                }
+                else
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="2 лоп И ОГОЛ.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="2 лоп.jpg";
+                  }
+                }
+            }
+            ogol.oninput = function() {
+              calc();
+                itogo();
+              if(ogol.checked) {ogolovki.innerHTML="1";}
+              else {ogolovki.innerHTML="0";}
+              if(lopost.value==1)
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="1 ЛОПАСТЬ С ОГОЛ.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="1 ЛОП.jpg";
+                  }
+                }
+                else
+                {
+                  if(ogol.checked)
+                  {
+                    kalkyl.src="2 лоп И ОГОЛ.jpg";
+                  }
+                  else
+                  {
+                    kalkyl.src="2 лоп.jpg";
+                  }
+                }
+            }
+        </script>
+    </body>
+</html>
