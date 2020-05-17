@@ -29,7 +29,7 @@
             }
              function val_sferm(){         
               var current = document.getElementsByClassName("active1");
-              if(current[0].value==1 || current[0].value==3 || current[0].value==6) return (width_out.value-2)*1150+2420;
+              if(current[0].value==1 || current[0].value==3 || current[0].value==5) return (width_out.value-2)*1150+2420;
               else return (width_out.value-2)*1150+2200;
             }
             function kol_lag(){
